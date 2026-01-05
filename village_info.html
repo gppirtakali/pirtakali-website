@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<title>Village Information Portal</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;              /* space between logo & text */
+  padding: 15px 25px;
+  background-color: #8ac5ef;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+}
+
+.header-text {
+  text-align: left;       /* text stays neat */
+}
+
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;
+}
+
+.tabs a {
+    padding: 14px 20px;
+    text-decoration: none;
+    color: #0a3d62;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tabs a:hover,
+.tabs a.active {
+    background: #e6f0ff;
+}
+
+/* Main container */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+}
+
+/* Sections */
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+
+h2 {
+    color: #0a3d62;
+    margin-bottom: 20px;
+}
+
+/* Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0a3d62;
+}
+
+.card h3 {
+    margin: 8px 0 4px;
+}
+
+.card span {
+    color: #0a3d62;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+/* Samiti */
+.samiti {
+    margin-bottom: 30px;
+}
+
+.samiti-list {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.samiti-list img {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+}
+
+/* FAQ */
+.faq {
+    background: white;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-left: 4px solid #0a3d62;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <img src="SDGloho.jpeg" class="logo">
+  <div class="header-text">
+    <h1>आमचे गाव माहिती पोर्टल</h1>
+    <p>गावाची संपूर्ण माहिती एकाच ठिकाणी</p>
+  </div>
+</div>
+
+
+<div class="tabs">
+<a class="tab active" onclick="showTab('all', this)"> संपूर्ण माहिती</a>
+<a class="tab" onclick="showTab('members', this)"> सदस्य</a>
+<a class="tab" onclick="showTab('servants', this)"> सेवक</a>
+<a class="tab" onclick="showTab('samitis', this)"><a href="samiti.html">समित्या</a></a>
+<a class="tab" onclick="showTab('suvidha', this)">गावाबद्दल माहिती</a>
+<a class="tab" onclick="showTab('tax', this)"> <a href ="QRcode.html">कर संकलन QR कोड</a></a>
+</div>
+
+<div class="container">
+
+<section id="all" class="active">
+<h2>संपूर्ण माहिती
+<h3>या विभागात गावाशी संबंधित सर्व माहिती एकाच ठिकाणी दिली आहे.</h3>
+</h2>
+
+<p><b>सीना नदीच्या काठावर वसलेलं आमचं छोटसं गाव म्हणजे पिरटाकळी, तालुका मोहोळ, जिल्हा सोलापूर . पीरटाकळी (Peertakali) हे सोलापूर जिल्ह्यातील मोहोळ तालुक्यामध्ये असलेले एक गाव आहे, जे मोहोळपासून सुमारे 29 किमी आणि सोलापूर शहरापासून अंदाजे 17 किमी अंतरावर आहे, आणि २०११ च्या जनगणनेनुसार, येथे सुमारे १४८७ लोक राहतात, ज्यामध्ये साक्षरतेचे प्रमाण चांगले आहे आणि हे गाव सार्वजनिक बस सेवांद्वारे जोडलेले आहे, ज्याचा पिन कोड ४१३००१ आहे.<br><br>गावातील बहुतांशी लोकांचा व्यवसाय शेती असून शेतीमध्ये बहुतांश ऊस पिकाचे उत्पादन मोठ्या प्रमाणावर केले जाते त्याचबरोबर फळबाग लागवड व पारंपारिक शेती पिके  रेशीम , ऊस, कांदा, ज्वारी ,गहू ,हरभरा अशी पीक घेतली जातात. तसेच शेतीस जोडधंदा म्हणून दुग्ध व्यवसाय तसेच रेशीम उद्योग व्यवसाय केला जातो या गावात रेशीम उद्योग अंतर्गत रेशीम शेती मोठ्या प्रमाणात केली जाते,येथे "रेशीम संचालनालय सोलापूर" यांचे कार्यालय मार्फत choki shed (रेशीम उद्योगातील लहानअळी, आंडीपुंज उत्पादन करणे)प्रकल्प मंजूर झाला असून सध्या प्रकल्पाचे कामकाज चालू आहे.<br><br>अगदी धार्मिक ,अध्यात्मिक, सांस्कृतिक वारसा लाभलेलं गाव या गावांमध्ये दिपाली पाडव्यानिमित्त अखंड हरिनाम सप्ताह आयोजन होतो. प्रत्येक वर्षी श्रावण मास निमित्त विविध धार्मिक ग्रंथांचे पारायण (पोती )होते. वार्षिक उत्सव रामनवमी ,दत्त जयंती ,श्रीकृष्ण जन्माष्टमी अशी विविध उत्सव आनंदाने साजरा होतात.तसेच या गावांमध्ये पीर साहेब देवस्थान देखील आहे .त्या देवस्थाना च्या दर्शनासाठी पंचक्रोशीतील भाविक वर्ग अगदी आनंदाने चैत्र महिन्यात यात्रा भरली जाते .पीरसाहेब देवस्थानाची जागृती पंचक्रोशी मध्ये पसरलेली आहे अशी ही छोटेसे गाव म्हणजे पिरटाकळी. या गावांमध्ये मोठ्या प्रमाणावर शेतकरी वर्ग आहे .येथील शेतकरी सुखी समाधानी समृद्धी आहे. या गावांमध्ये सर्व शेतकरी आनंदाने व समृद्धीने राहतात.</b></p>
+
+<!-- Members -->
+<h2>ग्रामपंचायत सदस्य</h2>
+<div class="card-grid">
+    <div class="card">
+        <img src="sarpanchimg2.jpeg">
+        <h3>श्री. अनिकेत लक्ष्मण पाटील</h3>
+        <span>सरपंच</span>
+        <p>📞 	9921178417<br>✉️ mauli4462@gmail.com</p>
+    </div>
+
+    <div class="card">
+        <img src="hanmant_khalsode.jpeg">
+        <h3>श्री हनुमंत सोपान खळसोडे</h3>
+        <span>उपसरपंच</span>
+        <p>📞 9921994390<br></p>
+    </div>
+
+    <div class="card">
+        <img src="dnyaneshwar_jagtap.jpeg">
+        <h3>ज्ञानेश्वर हरिदास जगताप</h3>
+        <span>सदस्य </span>
+        <p>📞 9011702507<br></p>
+    </div>
+
+    <div class="card">
+        <img src="sar.jpg">
+        <h3>सौ मंगल सारंग थिटे</h3>
+        <span>सदस्या</span>
+        <p>📞 9876543210<br></p>
+    </div>
+
+    <div class="card">
+        <img src="vaishali_thite.jpeg">
+        <h3>वैशाली भिमराव थिटे</h3>
+        <span>सदस्या</span>
+        <p>📞9049048444<br></p>
+    </div>
+
+    <div class="card">
+        <img src="shantabai.jpeg">
+        <h3>श्रीमती शांताबाई प्रभु सुतार</h3>
+        <span>सदस्या</span>
+        <p>📞 	9822828426<br></p>
+    </div>
+
+    <div class="card">
+        <img src="maya_kharade.jpeg">
+        <h3>सौ माया तुकाराम खराडे</h3>
+        <span>सदस्या</span>
+        <p>📞 9359541370<br> </p>
+    </div>
+</div>
+
+<!-- Servants -->
+<h2>ग्रामसेवक / कर्मचारी</h2>
+<div class="card-grid">
+    <div class="card">
+        <img src="umate_mam2.jpeg">
+        <h3>सौ उज्वला तानाजी उमाटे</h3>
+        <span>ग्रामसेवक</span>
+        <p>📞9766084851<br>✉️ ujwalaumate05@gmail.com</p>
+    </div>
+    <div class="card">
+        <img src="shrimant_jadhav.jpeg">
+        <h3>श्रीमंत नामदेव जाधव</h3>
+        <span>ग्रामपंचायत शिपाई</span>
+        <p>📞 9689966365<br>✉️ shrimantjadhav7229@gmail.com</p>
+    </div>
+
+    
+
+    <div class="card">
+        <img src="shukracharya_thite.jpeg">
+        <h3>श्री. शुक्राचार्य लक्ष्मण थिटे</h3>
+        <span>ग्रामरोजगार सहाय्यक</span>
+        <p>📞 8668263568<br>✉️ shukryasharyathite@gmail.com</p>
+    </div>
+
+    
+</div>
+
+<!-- Samitis -->
+<h2>समित्या</h2>
+<div class="samiti">
+    <h3>1) मुख्यमंत्री समृध्द पंचायत राज अभियान समिती</h3>
+    <h4>संपूर्ण माहिती पाहण्यासाठी येथे<a href="samiti.html"> क्लिक करा</a></h4>
+    <div class="samiti-list">
+        
+    </div>
+</div>
+
+<!-- Suvidha -->
+
+<h2>गावाबद्दल माहिती – </h2>
+<div class="faq">
+<ol>
+    <li><b>लोकसंख्या -1487 (जनगणना 2011 नुसार)<br> पुरुष -781  स्त्री-706   </b></li>
+    
+    <li><b>कुटुंबसंख्या- 308</b></li>
+    <li><b>मतदार संख्या- 1268</b></li>
+    <li><b>गावाचे एकूण क्षेत्रफळ 7.1 sq.Km</b></li>
+    <li><b>शेतकरी खातेदार संख्या 634</b></li>
+    <li><b>अंगणवाडी- 1</b></li>
+    <li><b>जिल्हा परिषद जिल्हा परिषद शाळा- 1<br>मुली- 38 मुले- 35  एकूण- 73</b></li>
+    
+    <li><b>जिल्हा परिषद प्राथमिक शाळा शौचालय व मुतारी संख्या<br>मुली- 2 मुले- 2</b></li>
+    
+    <li><b>नळ कनेक्शन- 125</b></li>
+    <li><b>पाणीपुरवठा स्त्रोत विहीर- 01</b></li>
+    <li><b>पाणीपुरवठा हातपंप संख्या-10</b></li>
+    <li><b>महिला बचत गट- 08</b></li>
+    <li><b>प्रधानमंत्री घरकुल लाभार्थी- 53</b></li>
+    <li><b>स्ट्रीट लाईट पोल- 46</b></li>
+    <li><b>स्व उत्पन्न RO plant गेल्या पाच वर्षांपासून गावात व उत्पन्न झाले आहे </b></li>
+    <li><b>महावितरण सब स्टेशन -काम चालू सुरू आहे</b></li>
+    
+</ol>
+</div>
+
+
+</section>
+
+
+<section id="members">
+<h2>ग्रामपंचायत सदस्य</h2>
+<!-- Members -->
+
+    <h2>ग्रामपंचायत सदस्य</h2>
+<div class="card-grid">
+    <div class="card">
+        <img src="sarpanchimg2.jpeg">
+        <h3>श्री. अनिकेत लक्ष्मण पाटील</h3>
+        <span>सरपंच</span>
+        <p>📞 	9921178417<br>✉️ mauli4462@gmail.com</p>
+    </div>
+
+    <div class="card">
+        <img src="hanmant_khalsode.jpeg">
+        <h3>श्री हनुमंत सोपान खळसोडे</h3>
+        <span>उपसरपंच</span>
+        <p>📞 9921994390<br></p>
+    </div>
+
+    <div class="card">
+        <img src="dnyaneshwar_jagtap.jpeg">
+        <h3>ज्ञानेश्वर हरिदास जगताप</h3>
+        <span>सदस्य </span>
+        <p>📞 9011702507<br></p>
+    </div>
+
+    <div class="card">
+        <img src="sar.jpg">
+        <h3>सौ मंगल सारंग थिटे</h3>
+        <span>सदस्या</span>
+        <p>📞 9876543210<br></p>
+    </div>
+
+    <div class="card">
+        <img src="vaishali_thite.jpeg">
+        <h3>वैशाली भिमराव थिटे</h3>
+        <span>सदस्या</span>
+        <p>📞9049048444<br></p>
+    </div>
+
+    <div class="card">
+        <img src="shantabai.jpeg">
+        <h3>श्रीमती शांताबाई प्रभु सुतार</h3>
+        <span>सदस्या</span>
+        <p>📞 	9822828426<br></p>
+    </div>
+
+    <div class="card">
+        <img src="maya_kharade.jpeg">
+        <h3>सौ माया तुकाराम खराडे</h3>
+        <span>सदस्या</span>
+        <p>📞 9359541370<br></p>
+    </div>
+</div>
+
+
+</section>
+
+<section id="servants">
+<h2>ग्रामसेवक / कर्मचारी</h2>
+<div class="card-grid">
+    <div class="card">
+        <img src="umate_mam2.jpeg">
+        <h3>सौ उज्वला तानाजी उमाटे</h3>
+        <span>ग्रामपंचायत अधिकारी</span>
+        <p>📞 9766084851<br>✉️ ujwalaumate05@gmail.com</p>
+    </div>
+
+    <div class="card">
+        <img src="shrimant_jadhav.jpeg">
+        <h3>श्रीमंत नामदेव जाधव</h3>
+        <span>ग्रामपंचायत शिपाई</span>
+        <p>📞 9689966365<br>✉️ shrimantjadhav7229@gmail.com</p>
+    </div>
+
+    <div class="card">
+        <img src="shukracharya_thite.jpeg">
+        <h3>श्री. शुक्राचार्य लक्ष्मण थिटे</h3>
+        <span>ग्रामरोजगार सहाय्यक</span>
+        <p>📞 8668263568<br>✉️ shukryasharyathite@gmail.com</p>
+    </div>
+
+
+    
+
+   
+</div>
+</section>
+
+<section id="samitis">
+<h2>समित्या</h2>
+<div class="samiti">
+<h3>स्वच्छता समिती</h3>
+<div class="samiti-list">
+<img src="images/samiti1.jpg">
+<img src="images/samiti1.jpg">
+</div>
+</div>
+</section>
+
+<section id="suvidha">
+<h2>गावाबद्दल माहिती – </h2>
+<div class="faq">
+<ol>
+    <li><b>लोकसंख्या -1487 (जनगणना 2011 नुसार)<br> पुरुष -781    स्त्री-706    </b></li>
+    
+    <li><b>कुटुंबसंख्या- 308</b></li>
+    <li><b>मतदार संख्या- 1268</b></li>
+    <li><b>गावाचे एकूण क्षेत्रफळ 7.1 sq.Km</b></li>
+    <li><b>शेतकरी खातेदार संख्या 634</b></li>
+    <li><b>अंगणवाडी- 1</b></li>
+    <li><b>जिल्हा परिषद जिल्हा परिषद शाळा- 1<br>मुली- 38 मुले- 35  एकूण- 73</b></li>
+    
+    <li><b>जिल्हा परिषद प्राथमिक शाळा शौचालय व मुतारी संख्या<br>मुली- 2 मुले- 2</b></li>
+    
+    <li><b>नळ कनेक्शन- 125</b></li>
+    <li><b>पाणीपुरवठा स्त्रोत विहीर- 01</b></li>
+    <li><b>पाणीपुरवठा हातपंप संख्या-10</b></li>
+    <li><b>महिला बचत गट- 08</b></li>
+    <li><b>प्रधानमंत्री घरकुल लाभार्थी- 53</b></li>
+    <li><b>स्ट्रीट लाईट पोल- 46</b></li>
+    <li><b>स्व उत्पन्न RO plant गेल्या पाच वर्षांपासून गावात व उत्पन्न झाले आहे </b></li>
+    <li><b>महावितरण सब स्टेशन -काम चालू सुरू आहे</b></li>
+    
+</ol>
+</div>
+</section>
+
+</div>
+
+<script>
+function showTab(id, element) {
+    document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+
+    document.querySelectorAll(".tab").forEach(tab => tab.classList.remove("active"));
+    element.classList.add("active");
+}
+</script>
+
+</body>
+</html>

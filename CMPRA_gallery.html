@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Photo Gallery</title>
+
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#f4f6f8, #eef2f5);
+  margin: 0;
+}
+
+/* Page wrapper */
+.gallery-page {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Main title */
+.gallery-page h1 {
+  text-align: center;
+  color: #0a3d62;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 45px;
+  font-size: 15px;
+}
+
+/* Section heading */
+.gallery-page h2 {
+  color: #0a3d62;
+  margin: 50px 0 18px;
+  padding-left: 12px;
+  border-left: 5px solid #0a3d62;
+  font-size: 21px;
+  animation: fadeInUp 0.6s ease;
+}
+
+/* Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+/* Card */
+.gallery-item {
+  position: relative;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+}
+
+/* Image */
+.gallery-item img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Hover overlay */
+.gallery-item::after {
+  content: "View Image";
+  position: absolute;
+  inset: 0;
+  background: rgba(10,61,98,0.55);
+  color: #fff;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* Caption */
+.gallery-item p {
+  padding: 8px;
+  font-size: 13px;
+  color: #444;
+  text-align: center;
+  margin: 0;
+}
+
+/* Fade animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .gallery-page h2 {
+    font-size: 18px;
+  }
+}
+
+.gallery-grid a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa, #e4ecf4);
+  padding: 40px 20px;
+}
+
+/* Page heading */
+.page-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 35px;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+/* Reset + base vibe */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa, #e4ecf4);
+  padding: 40px 20px;
+}
+
+/* Page heading */
+.page-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 35px;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+
+/* Video grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Video card */
+.video-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 40px rgba(0,0,0,0.18);
+}
+
+/* Heading */
+.video-card h3 {
+  text-align: center;
+  margin-bottom: 12px;
+  color: #34495e;
+  font-size: 1.1rem;
+}
+
+/* Video */
+.video-card video {
+  width: 60%;
+  border-radius: 12px;
+  outline: none;
+}
+
+</style>
+
+
+
+
+<div class="lightbox" id="lightbox" onclick="this.style.display='none'">
+  <img id="lightbox-img">
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".gallery-item img").forEach(img => {
+    img.addEventListener("click", function () {
+      document.getElementById("lightbox-img").src = this.src;
+      document.getElementById("lightbox").style.display = "flex";
+    });
+  });
+});
+</script>
+</head>
+
+<body>
+
+<section class="gallery-page">
+<h1>CMPRA फोटो गॅलरी</h1>
+<p class="subtitle">Village Activities & Events</p>
+
+<h2>Tree Plantation</h2>
+<div class="gallery-grid">
+  <a href="tree_plantaatio_img.jpeg" > 
+  <div class="gallery-item"><img src="tree_plantaatio_img.jpeg" ><p></p></div></a>
+  
+</div>
+<h2>Aajivika Training</h2>
+<div class="gallery-grid">
+  <a href="training.jpeg" ><div class="gallery-item"><img src="training.jpeg"><p></p></div></a>
+  <a href="traning_2.jpeg" ><div class="gallery-item"><img src="traning_2.jpeg"><p></p></div></a>
+  
+</div>
+<h2>Swacchata Abhiyan</h2>
+<div class="gallery-grid" >
+  <a href="swachata_img1.jpeg" ><div class="gallery-item"><img src="swachata_img1.jpeg"><p></p></div></a>
+  <a href="swachata_img2.jpeg" ><div class="gallery-item"><img src="swachata_img2.jpeg"><p></p></div></a>
+  <a href="swachata_img3.jpeg" ><div class="gallery-item"><img src="swachata_img3.jpeg"><p></p></div></a>
+  <a href="swachata_img4.jpeg" ><div class="gallery-item"><img src="swachata_img4.jpeg"><p></p></div></a>
+  <a href="swachata_img5.jpeg" ><div class="gallery-item"><img src="swachata_img5.jpeg"><p></p></div></a>
+  
+  
+  
+</div>
+<h2>मुख्य मंत्री समृद्ध पंचायत राज अभियान अंतर्गत बालिका दिनानिमित्त अंगणवाडीस LED TV संच देऊन बालिका दिन साजरा केला</h2>
+<div class="gallery-grid" >
+  <a href="balika_din.jpeg" ><div class="gallery-item"><img src="balika_din.jpeg"><p></p></div></a>
+</div>  
+
+<div class="video-grid">
+
+  <div class="video-card">
+    <h3>Tree plantation </h3>
+    <video controls>
+      <source src="tree_plantation_vdo.mp4" type="video/mp4" style="width: 400px;height: 400px;"">
+    </video>
+  </div>
+
+  <div class="video-card">
+    <h3>मुख्यमंत्री समृद्ध पंचायतराज अभियान अंतर्गत जिल्हा परिषद शाळा आवारात परसबाग करताना </h3>
+    <video controls>
+      <source src="parasbag.mp4" type="video/mp4" style="width: 400px;height: 400px;">
+    </video>
+  </div>
+  <div class="video-card">
+    <h3>मुख्यमंत्री समृद्ध पंचायत राज अभियान अंतर्गत कौशल्य प्रशिक्षण कार्यक्रम यामध्ये महिलांना बेसिक आणि आडवांस केक बनवणे याचे प्रशिक्षण देणे उपक्रम राबवताना </h3>
+    <video controls>
+      <source src="cake.mp4" type="video/mp4" style="width: 400px;height: 400px;">
+    </video>
+  </div>
+  <div class="video-card">
+    <h3>मुख्य मंत्री समृद्ध पंचायत राज अभियान अंतर्गत ग्राम संघ महिला मेळावा</h3>
+    <video controls>
+      <source src="gram_sangh_mahila_melava.mp4" type="video/mp4" style="width: 400px;height: 400px;">
+    </video>
+  </div>
+</div>
+</section>

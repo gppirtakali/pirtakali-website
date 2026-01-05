@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <title>Government Portal Style Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* ===== RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f9;
+            color: #1a1a1a;
+        }
+
+        /* ===== TOP HEADER ===== */
+        header {
+            background-color: #004a99;
+            color: white;
+            padding: 20px 40px;
+        }
+
+        .top-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* ===== NAVBAR ===== */
+        nav {
+            background-color: #003366;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            padding: 12px 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav ul li:hover {
+            background-color: #005bb5;
+        }
+
+        /* ===== HERO / BANNER ===== */
+        .hero {
+            background-color: #e6eef7;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: #003366;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .box {
+            background: white;
+            padding: 15px;
+            border: 1px solid #ddd;
+            flex: 1;
+        }
+
+        .box h2 {
+            background-color: #004a99;
+            color: white;
+            padding: 8px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .box ul {
+            list-style: none;
+        }
+
+        .box ul li {
+            padding: 6px 0;
+            border-bottom: 1px dashed #ccc;
+            font-size: 14px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="top-header">
+        <div class="logo">CMS PR ARDD Maharashtra</div>
+        <div>Government of Maharashtra</div>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">मुख्यपृष्ठ</a></li>
+        <li><a href="#">आमच्याबद्दल</a></li>
+        <li><a href="#">विभाग</a></li>
+        <li><a href="#">नागरिक सेवा</a></li>
+        <li><a href="#">सूचना</a></li>
+        <li><a href="#">फोटो गॅलरी</a></li>
+        <li><a href="#">संपर्क</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1>Welcome to CMS PR ARDD Portal</h1>
+    <p>Citizen Services • Notices • Government Information</p>
+</section>
+
+<section class="container">
+    <div class="box">
+        <h2>Latest Announcements</h2>
+        <ul>
+            <li>Recruitment Notification 2025</li>
+            <li>New Rural Development Scheme</li>
+            <li>Tender Updates</li>
+            <li>Public Notice</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h2>Quick Links</h2>
+        <ul>
+            <li>Online Services</li>
+            <li>Downloads</li>
+            <li>RTI Information</li>
+            <li>Grievance Portal</li>
+        </ul>
+    </div>
+</section>
+
+<footer>
+    © 2025 Government of Maharashtra | For Academic & Demo Use
+</footer>
+
+</body>
+</html>

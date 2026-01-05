@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Photo Gallery</title>
+
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#f4f6f8, #eef2f5);
+  margin: 0;
+}
+
+/* Page wrapper */
+.gallery-page {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Main title */
+.gallery-page h1 {
+  text-align: center;
+  color: #0a3d62;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 45px;
+  font-size: 15px;
+}
+
+/* Section heading */
+.gallery-page h2 {
+  color: #0a3d62;
+  margin: 50px 0 18px;
+  padding-left: 12px;
+  border-left: 5px solid #0a3d62;
+  font-size: 21px;
+  animation: fadeInUp 0.6s ease;
+}
+
+/* Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+/* Card */
+.gallery-item {
+  position: relative;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+}
+
+/* Image */
+.gallery-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Hover overlay */
+.gallery-item::after {
+  content: "View Image";
+  position: absolute;
+  inset: 0;
+  background: rgba(10,61,98,0.55);
+  color: #fff;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* Caption */
+.gallery-item p {
+  padding: 8px;
+  font-size: 13px;
+  color: #444;
+  text-align: center;
+  margin: 0;
+}
+
+/* Fade animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .gallery-page h2 {
+    font-size: 18px;
+  }
+}
+
+.gallery-grid a {
+  text-decoration: none;
+  color: inherit;
+}
+
+</style>
+
+
+
+
+<div class="lightbox" id="lightbox" onclick="this.style.display='none'">
+  <img id="lightbox-img">
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".gallery-item img").forEach(img => {
+    img.addEventListener("click", function () {
+      document.getElementById("lightbox-img").src = this.src;
+      document.getElementById("lightbox").style.display = "flex";
+    });
+  });
+});
+</script>
+</head>
+
+<body>
+
+<section class="gallery-page">
+<h1>छायाचित्र दालन</h1>
+<p class="subtitle">Village Activities & Events</p>
+
+<h2>सीसीटीव्ही बसवणे</h2>
+<div class="gallery-grid">
+  <a href="CCTV1.jpeg" > 
+  <div class="gallery-item"><img src="CCTV1.jpeg"><p></p></div></a>
+  <a href="CCTV2.jpeg">
+  <div class="gallery-item"><img src="CCTV2.jpeg"><p></p></div></a>
+  <a href="CCTV_at_grampanchyat.jpeg">
+  <div class="gallery-item"><img src="CCTV_at_grampanchyat.jpeg"><p></p></div></a>
+  <a href="CCTV_basvne.jpeg">
+  <div class="gallery-item"><img src="CCTV_basvne.jpeg"><p></p></div></a>
+
+</div>
+
+<h2>कॅन्सर ग्रस्त बालकांना सहायता निधी गोळा करून देणे</h2>
+<div class="gallery-grid">
+  <a href="cancer1.jpeg"><div class="gallery-item"><img src="cancer1.jpeg"><p></p></div></a>
+  <a href="cancer2.jpeg"><div class="gallery-item"><img src="cancer2.jpeg"><p></p></div></a>
+  <a href="cancer3.jpeg"><div class="gallery-item"><img src="cancer3.jpeg"><p></p></div></a>
+  <a href="cancer4.jpeg"><div class="gallery-item"><img src="cancer4.jpeg"><p></p></div></a>
+  <a href="cancer5.jpeg"><div class="gallery-item"><img src="cancer5.jpeg"><p></p></div></a>
+</div>
+
+<h2>महिलांची आरोग्य तपासणी</h2>
+<div class="gallery-grid">
+  <a href="healthchrckup1.jpeg"><div class="gallery-item"><img src="healthchrckup1.jpeg"><p></p></div></a>
+  <a href="health2.jpeg"><div class="gallery-item"><img src="health2.jpeg"><p></p></div></a>
+  <a href="health3.jpeg"><div class="gallery-item"><img src="health3.jpeg"><p></p></div></a>
+  <a href="health4.jpeg"><div class="gallery-item"><img src="health4.jpeg"><p></p></div></a>
+  <a href="health5.jpeg"><div class="gallery-item"><img src="health5.jpeg"><p></p></div></a>
+</div>
+
+<h2>विशेष कर संकलन मोहीम</h2>
+<div class="gallery-grid">
+  <a href="tax1.jpeg"><div class="gallery-item"><img src="tax1.jpeg"><p></p></div></a>
+  <a href="tax2.jpeg"><div class="gallery-item"><img src="tax2.jpeg"><p></p></div></a>
+</div>
+
+<h2>प्लास्टिक बंदी विशेष उपक्रम</h2>
+<div class="gallery-grid">
+  <a href="noplastic1.jpeg"><div class="gallery-item"><img src="noplastic1.jpeg"><p></p></div></a>
+  <a href="noplastic2.jpeg"><div class="gallery-item"><img src="noplastic2.jpeg"><p></p></div></a>
+  <a href="noplastic3.jpeg"><div class="gallery-item"><img src="noplastic3.jpeg"><p></p></div></a>
+  <a href="noplastic4.jpeg"><div class="gallery-item"><img src="noplastic4.jpeg"><p></p></div></a>
+</div>
+
+<h2>आयुष्यमान भारत कार्ड काढणे</h2>
+<div class="gallery-grid">
+  <a href="card1.jpeg"><div class="gallery-item"><img src="card1.jpeg"><p></p></div></a>
+  <a href="card2.jpeg"><div class="gallery-item"><img src="card2.jpeg"><p></p></div></a>
+  <a href="card3.jpeg"><div class="gallery-item"><img src="card3.jpeg"><p></p></div></a>
+  <a href="card4.jpeg"><div class="gallery-item"><img src="card4.jpeg"><p></p></div></a>
+  <a href="card5.jpeg"><div class="gallery-item"><img src="card5.jpeg"><p></p></div></a>
+</div>
+
+<h2>जनावरांची आरोग्य तपासणी शिबिर</h2>
+<div class="gallery-grid">
+  <a href="animal1.jpeg"><div class="gallery-item"><img src="animal1.jpeg"><p></p></div></a>
+  <a href="animal2.jpeg"><div class="gallery-item"><img src="animal2.jpeg"><p></p></div></a>
+  <a href="animal3.jpeg"><div class="gallery-item"><img src="animal3.jpeg"><p></p></div></a>
+  <a href="animal4.jpeg"><div class="gallery-item"><img src="animal4.jpeg"><p></p></div></a>
+  <a href="animal5.jpeg"><div class="gallery-item"><img src="animal5.jpeg"><p></p></div></a>
+  <a href="animal6.jpeg"><div class="gallery-item"><img src="animal6.jpeg"><p></p></div></a>
+  <a href="animal7.jpeg"><div class="gallery-item"><img src="animal7.jpeg"><p></p></div></a>
+</div>
+
+<h2>दप्तर अद्यावत करणे</h2>
+<div class="gallery-grid">
+  <a href="books1.jpeg"><div class="gallery-item"><img src="books1.jpeg"><p></p></div></a>
+  <a href="books2.jpeg"><div class="gallery-item"><img src="books2.jpeg"><p></p></div></a>
+</div>
+
+<h2>ग्रामपंचायतीचा सन्मान</h2>
+<div class="gallery-grid">
+  <a href="award.jpeg"><div class="gallery-item">
+    <img src="award.jpeg" style="width:500px;height:700px;">
+    <p></p>
+  </div></a>
+</div>
+
+<h2>दिव्यांग सत्कार समारंभ</h2>
+<div class="gallery-grid">
+  <a href="satkar1.jpeg"><div class="gallery-item"><img src="satkar1.jpeg"><p></p></div></a>
+  <a href="satkar2.jpeg"><div class="gallery-item"><img src="satkar2.jpeg"><p></p></div></a>
+  <a href="satkar3.jpeg"><div class="gallery-item"><img src="satkar3.jpeg"><p></p></div></a>
+ <a href="satkar4.jpeg"> <div class="gallery-item"><img src="satkar4.jpeg"><p></p></div></a>
+  <a href="satkar6.jpeg"><div class="gallery-item"><img src="satkar6.jpeg"><p></p></div></a>
+  <a href="satkar8.jpeg"><div class="gallery-item"><img src="satkar8.jpeg"><p></p></div></a>
+  <a href="satkar9.jpeg"><div class="gallery-item"><img src="satkar9.jpeg"><p></p></div></a>
+  <a href="satkar10.jpeg"><div class="gallery-item"><img src="satkar10.jpeg"><p></p></div></a>
+</div>
+
+<h2>लोकवर्गणीतून पानंद रस्त्याचे काम</h2>
+<div class="gallery-grid">
+  <a href="rasta.jpeg"><div class="gallery-item"><img src="rasta.jpeg"><p>before</p></div></a>
+  <a href="roadimg.jpeg"><div class="gallery-item"><img src="roadimg.jpeg"><p>after</p></div></a>
+  
+</div>
+
+<h2>लोक वर्गणीतून मंदिराच्या कळसाचे काम</h2>
+<div class="gallery-grid">
+  <a href="temple.jpeg"><div class="gallery-item"><img src="temple.jpeg"><p></p></div></a>
+</div>
+
+<h2>सुमन दशरथ फंड सिंचन विहीर</h2>
+<div class="gallery-grid">
+  <a href="sinchan1.jpeg"><div class="gallery-item"><img src="sinchan1.jpeg"><p></p></div></a>
+  <a href="sinchan2.jpeg"><div class="gallery-item"><img src="sinchan2.jpeg"><p></p></div></a>
+  <a href="sinchan3.jpeg"><div class="gallery-item"><img src="sinchan3.jpeg"><p></p></div></a>
+  <a href="sinchan4.jpeg"><div class="gallery-item"><img src="sinchan4.jpeg"><p></p></div></a>
+  <a href="sinchan5.jpeg"><div class="gallery-item"><img src="sinchan5.jpeg"><p></p></div></a>
+  <a href="sinchan6.jpeg"><div class="gallery-item"><img src="sinchan6.jpeg"><p></p></div></a>
+ 
+</div>
+<h2>छतावरील पाऊस पाणी संकलन</h2>
+<div class="gallery-grid">
+  <a href="rainwater.jpeg"><div class="gallery-item"><img src="rainwater.jpeg"><p></p></div></a>
+  <a href="rainwater2.jpeg"><div class="gallery-item"><img src="rainwater2.jpeg"><p></p></div></a>
+  <a href="rainwater3.jpeg"><div class="gallery-item"><img src="rainwater3.jpeg"><p></p></div></a>
+  
+</div>
+<h2>ग्रामपंचायत पायाभूत सुविधा इमारती</h2>
+<div class="gallery-grid">
+  <a href="imarat1.jpeg"><div class="gallery-item"><img src="imarat1.jpeg"><p></p></div></a>
+  <a href="imarat2.jpeg"><div class="gallery-item"><img src="imarat2.jpeg"><p></p></div></a>
+  <a href="imarat3.jpeg"><div class="gallery-item"><img src="imarat3.jpeg"><p></p></div></a>
+  <a href="imarat4.jpeg"><div class="gallery-item"><img src="imarat4.jpeg"><p></p></div></a>
+  <a href="imarat5.jpeg"><div class="gallery-item"><img src="imarat5.jpeg"><p></p></div></a>
+  <a href="imarat6.jpeg"><div class="gallery-item"><img src="imarat6.jpeg"><p></p></div></a>
+  <a href="imarat7.jpeg"><div class="gallery-item"><img src="imarat7.jpeg"><p></p></div></a>
+  
+</div>
+<h2>संत गाडगेबाबा स्वच्छता अभियान </h2>
+<div class="gallery-grid">
+  <a href="swachatta1.jpeg"><div class="gallery-item"><img src="swachatta1.jpeg"><p></p></div></a>
+  <a href="swachatta2.jpeg"><div class="gallery-item"><img src="swachatta2.jpeg"><p></p></div></a>
+  <a href="swachatta3.jpeg"><div class="gallery-item"><img src="swachatta3.jpeg"><p></p></div></a>
+  <a href="swachatta4.jpeg"><div class="gallery-item"><img src="swachatta4.jpeg"><p></p></div></a>
+  <a href="swachatta5.jpeg"><div class="gallery-item"><img src="swachatta5.jpeg"><p></p></div></a>
+  <a href="swachatta6.jpeg"><div class="gallery-item"><img src="swachatta6.jpeg"><p></p></div></a>
+  <a href="swachatta7.jpeg"><div class="gallery-item"><img src="swachatta7.jpeg"><p></p></div></a>
+  <a href="swachatta8.jpeg"><div class="gallery-item"><img src="swachatta8.jpeg"><p></p></div></a>
+ 
+</div>
+<h2>घनकचरा व्यवस्थापन</h2>
+<div class="gallery-grid">
+  <a href="ghankachra3.jpeg"><div class="gallery-item"><img src="ghankachra3.jpeg" style="width: 500px;height: 600px;"><p></p></div></a>
+  <a href="ghankachraimg.jpeg"><div class="gallery-item"><img src="ghankachraimg.jpeg" style="width: 500px;height: 600px;"><p></p></div></a>
+  
+</div>
+<h2>PMAY+MGNREGA WORK</h2>
+<div class="gallery-grid">
+  <a href="gharkul1.jpeg"><div class="gallery-item"><img src="gharkul1.jpeg" style="width: 500px;height: 600px;"><p></p></div></a>
+  <a href="gharkul2.jpeg"><div class="gallery-item"><img src="gharkul2.jpeg" style="width: 500px;height: 600px;"><p></p></div></a>
+  
+</div>
+<h2>SOLAR ENERGY</h2>
+<div class="gallery-grid">
+  <a href="solarpump.jpeg"><div class="gallery-item"><img src="solarpump.jpeg" ><p>निवृत्ती वामन जगताप सौर ऊर्जा आधारित शेतीपंप</p></div></a>
+  <a href="SOLARPUMP2.jpeg"><div class="gallery-item"><img src="SOLARPUMP2.jpeg" ><p>सौर ऊर्जा आधारित विद्युत व्यवस्थापन जिल्हा परिषद प्राथमिक शाळा</p></div></a>
+  <a href="solar_on_grampanchyat.jpeg"><div class="gallery-item"><img src="solar_on_grampanchyat.jpeg" ><p>सौर ऊर्जा आधारित विद्युत व्यवस्थापन ग्रामपंचायत पिरटाकळी</p></div></a>
+  
+</div>
+<h2>अपारंपारिक ऊर्जा स्तोत्र चा वापर बायोगॅस </h2>
+<div class="gallery-grid">
+  <a href="biogas_dnyaneshwar.jpeg"><div class="gallery-item"><img src="biogas_dnyaneshwar.jpeg"><p>लाभार्थी ज्ञानेश्वर मोहन फंड</p></div></a>
+  <a href="biogas_ankush.jpeg"><div class="gallery-item"><img src="biogas_ankush.jpeg"><p>लाभार्थी अंकुश भिकाजी फंड</p></div></a>
+  <a href="biogas_javale.jpeg"><div class="gallery-item"><img src="biogas_javale.jpeg"><p>लाभार्थी बळीराम साधू जावळे</p></div></a>
+  
+</div>
+<h2>SOLAR ENERGY</h2>
+<div class="gallery-grid">
+  <a href="news2.jpeg"><div class="gallery-item"><img src="news2.jpeg" style="width: 800px;height: 800px;"><p>निवृत्ती वामन जगताप सौर ऊर्जा आधारित शेतीपंप</p></div></a>
+  
+  
+</div>
+
+
+
+</section>
+
+</body>
+</html>
+  

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Video Gallery</title>
+
+<style>
+/* Reset + base vibe */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa, #e4ecf4);
+  padding: 40px 20px;
+}
+
+/* Page heading */
+.page-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 35px;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+
+/* Video grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Video card */
+.video-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 40px rgba(0,0,0,0.18);
+}
+
+/* Heading */
+.video-card h3 {
+  text-align: center;
+  margin-bottom: 12px;
+  color: #34495e;
+  font-size: 1.1rem;
+}
+
+/* Video */
+.video-card video {
+  width: 100%;
+  border-radius: 12px;
+  outline: none;
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="page-title">🎥 चलचित्र दालन</h1>
+
+<div class="video-grid">
+
+  <div class="video-card">
+    <h3>महिलांची आरोग्य तपासणी</h3>
+    <video controls>
+      <source src="healthvdo1.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="video-card">
+    <h3>महिलांची आरोग्य तपासणी</h3>
+    <video controls>
+      <source src="healthvdo2.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="video-card">
+    <h3>आयुष्यमान भारत कार्ड काढणे</h3>
+    <video controls>
+      <source src="cardvdo.mp4" type="video/mp4"> 
+    </video>
+  </div>
+
+  
+
+  <div class="video-card">
+    <h3>जनावरांची आरोग्य तपासणी शिबिर</h3>
+    <video controls>
+      <source src="animalvdo.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="video-card">
+    <h3>जनावरांची आरोग्य तपासणी शिबिर</h3>
+    <video controls>
+      <source src="animalvdo2.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="video-card">
+    <h3>RAIN WATER HARVESTING MARUTI TEMPLE</h3>
+    <video controls>
+      <source src="rainharwestingvdo.mp4" type="video/mp4" >
+    </video>
+  </div>
+  <div class="video-card">
+    <h3>RAIN WATER HARVESTING GRAMPANCHAYAT OFFICE</h3>
+    <video controls>
+      <source src="rainwater_harwesting_office.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="video-card">
+    <h3>संत गाडगेबाबा स्वच्छता अभियान</h3>
+    <video controls>
+      <source src="cleaning_vdo.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="video-card">
+    <h3>संत गाडगेबाबा स्वच्छता अभियान</h3>
+    <video controls>
+      <source src="clean_vdo2.mp4" type="video/mp4">
+    </video>
+  </div>
+   <div class="video-card">
+    <h3>मुख्यमंत्री समृद्ध पंचायत राज अभियान अंतर्गत कौशल्य प्रशिक्षण कार्यक्रम यामध्ये महिलांना बेसिक आणि आडवांस केक बनवणे याचे प्रशिक्षण देणे उपक्रम राबवताना</h3>
+    <video controls>
+      <source src="cake.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="video-card">
+    <h3>मुख्यमंत्री समृद्ध पंचायतराज अभियान अंतर्गत जिल्हा परिषद शाळा आवारात परसबाग करताना</h3>
+    <video controls>
+      <source src="parasbag.mp4" type="video/mp4">
+    </video>
+  </div>
+
+</div>
+
+
+
+</body>
+</html>
