@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zilla Parishad Style Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            body {
+  font-family: "Noto Sans", "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+            background-color: #f4f6f9;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background-color: hwb(26 27% 9%);
+            color: white;
+            padding: 20px 40px;
+        }
+
+        .top-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* ===== NAVBAR ===== */
+        nav {
+            background-color: #003366;
+            
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            padding: 12px 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav ul li:hover {
+            background-color: #005bb5;
+        }
+
+        /* ===== BANNER ===== */
+        .banner {
+            background-color: #e6eef7;
+            padding: 100px 50px;
+            text-align: center;
+        }
+
+        .banner h1 {
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            background: white;
+            padding: 15px;
+            border: 1px solid #ddd;
+            flex: 1;
+        }
+
+        .box h2 {
+            background-color: #004a99;
+            color: white;
+            padding: 8px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .box ul {
+            list-style: none;
+        }
+
+        .box ul li {
+            padding: 6px 0;
+            border-bottom: 1px dashed #ccc;
+            font-size: 14px;
+        }
+
+        
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+        }
+        .fade-slider {
+  position: relative;
+  width: 100%;
+  height: 450px;
+}
+
+.fade-slider img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fade 15s infinite;
+}
+
+.fade-slider img:nth-child(1) { animation-delay: 0s; }
+.fade-slider img:nth-child(2) { animation-delay: 3s; }
+.fade-slider img:nth-child(3) { animation-delay: 6s; }
+.fade-slider img:nth-child(4) { animation-delay: 9s; }
+.fade-slider img:nth-child(5) { animation-delay: 12s; }
+
+@keyframes fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.members-section {
+    margin-top: 50px;
+}
+
+.members-section h3 {
+    text-align: center;
+    color: #0a3d62;
+    margin-bottom: 30px;
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.member-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.member-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0a3d62;
+    margin-bottom: 15px;
+}
+
+.member-card h4 {
+    margin: 5px 0;
+    color: #333;
+}
+
+.member-card span {
+    display: block;
+    font-size: 14px;
+    color: #0a3d62;
+    margin-bottom: 10px;
+}
+
+.member-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.footer {
+  background: linear-gradient(135deg, #0a3d62, #020617);
+  color: #e5e7eb;
+  font-family: "Segoe UI", sans-serif;
+  margin-top: 50px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+/* Footer Boxes */
+.footer-box h4 {
+  color: #22c55e;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-text {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+/* Logo */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-circle {
+  width: 48px;
+  height: 48px;
+  background: #22c55e;
+  color: #022c22;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo span {
+  font-size: 13px;
+  color: #a7f3d0;
+}
+
+/* Contact */
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.footer-contact li {
+  margin-bottom: 8px;
+}
+
+/* Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #22c55e;
+  padding-left: 6px;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin: 15px 0;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  background: #020617;
+  border: 1px solid #22c55e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #22c55e;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #22c55e;
+  color: #022c22;
+  transform: translateY(-4px);
+}
+
+/* Office Hours */
+.office-hours h5 {
+  margin-top: 15px;
+  color: #a7f3d0;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  background: #020617;
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  color: #9ca3af;
+  a {
+    color:#9ca3af;
+    text-decoration: none;
+}
+
+}
+
+.news-bar {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #541d14, #713a1a);
+  color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+  height: 45px;
+  overflow: hidden;
+}
+
+/* Label */
+.news-label {
+  background: #713a1a;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Scrolling area */
+.news-container {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Moving text */
+.news-content {
+  display: inline-flex;
+  gap: 60px;
+  padding-left: 100%;
+  animation: scroll-news 25s linear infinite;
+}
+
+/* Pause on hover */
+.news-bar:hover .news-content {
+  animation-play-state: paused;
+}
+
+.news-content span {
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+/* Animation */
+@keyframes scroll-news {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Blinking effect for special tab */
+.blink-tab {
+  color: #f4eeee; /* Deep official red */
+  font-weight: 600;
+  animation: blinkGlow 1.2s infinite;
+}
+
+/* Animation */
+@keyframes blinkGlow {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 0 transparent;
+  }
+  50% {
+    opacity: 0.3;
+    text-shadow: 0 0 8px rgba(223, 21, 21, 0.8);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 0 transparent;
+  }
+}
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+h1 { font-size: 28px; }
+h2 { font-size: 18px; }
+h3 { font-size: 20px; }
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+
+
+<header>
+    <div class="top-header">
+        <div class=" logo-circle"><img src="peertakli_logo.png" style="width: 80px;height: 80px;"> 
+        </div>
+        <h1><div class="logo">ग्रामपंचायत पिरटाकळी</div></h1>
+        <div><b>महाराष्ट्र शासन</b></div>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">मुख्यपृष्ठ</a></li>
+        <li><a href="village_info.html">आमच्याबद्दल</a></li>
+        <li><a href="#">विभाग</a></li>
+        <li><a href="seva.html">नागरिक सेवा</a></li>
+        <li><a href="#">सूचना</a></li>
+        <li><a href="photo2.html">छायाचित्र दालन </a></li>
+        <li><a href="video.html">चलचित्र दालन</a></li>
+        <li><a href="#">संपर्क</a></li>
+        <li><a href="shasan_nirnay.html">शासन निर्णय</a></li>
+        <li>
+  <a href="CMPRARDD.html" class="blink-tab">
+    मुख्यमंत्री समृद्ध पंचायत राज अभियान
+  </a>
+</li>
+<li> <a href="documentries.html">मिनी डॉक्युमेंटरीज</a></li>
+
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe1Jq5BpurtOIaoi3Bp-qz6mGHSf1MryUqFN8ZIyH-eaYz0uQ/viewform?usp=header"><li>नागरिकांच्या प्रतिक्रिया</li></a></li>
+    </ul>
+</nav>
+<div class="news-bar">
+  <span class="news-label">📰 Latest News</span>
+
+  <div class="news-container">
+    <div class="news-content">
+      <span>🔔 🏃‍♀🏃‍♀🏃‍♀ त्वरा करा व आपला कर आजच तातडीने ग्रामपंचायत कार्यालयात भरून 50 टक्के कर सवलत प्राप्त करून घ्या कर सवलती करता फक्त शेवटचे काहीच दिवस उरलेले आहेत🏃🏃🏃🏃</span>
+     
+    </div>
+  </div>
+</div>
+
+
+
+<section class="banner">
+    <h1>ग्रामपंचायत पिरटाकळी ,तालुका मोहोळ ,जिल्हा सोलापूर आपले सहर्ष स्वागत करत आहे</h1>
+    <p>Official Information Platform for Citizens</p>
+</section>
+<div class="fade-slider">
+  <img src="front_screen1.jpeg">
+  <img src="front_screen2.jpeg">
+  <img src="rangoli.jpeg">
+  <img src="front_screen4.jpeg">
+  <img src="front_screen5.jpeg">
+  
+</div>
+
+<section class="container">
+    <div class="box">
+        <h2>Latest Announcements</h2>
+        <ul>
+            
+            <li><a href="VBGRAMG.html">विकसित भारत रोजगार व अजीविका हमी मिशनVB G RAM G (ग्रामीण) अधिनियम2025</a></li>
+            <li><a href="https://mahatenders.gov.in/nicgep/app"> Tender Information</li></a>
+            <li><a href="Public-Holiday-2026.pdf">Public Holiday Notice</a></li>
+            
+        </ul>
+    </div>
+
+    <div class="box">
+        <h2>Important Links</h2>
+        <ul>
+            <li><a href="https://rtionline.gov.in/"> RTI Information</a> </li>
+            <li><a href="seva.html">सेवा हमी कायदा</a></li>
+            <li><a href="seva.html"> Services</a></li>
+            <li><a href="https://aaplesarkar.mahaonline.gov.in/"> ग्रामविकास विभाग सेवा RTS right to Service Act </a></li>
+            <li><a href=" https://grievances.maharashtra.gov.in/en">Grievance Portal</a></li>
+            <li><a href="https://dc.crsorgi.gov.in/crs/Auth/general-public" >जन्म आणि मृत्यू दाखला (प्रमाणपत्र)</a></li>
+            <li><a href="https://cmsprardd.maharashtra.gov.in/">मुख्यमंत्री समृद्ध पंचायत राज अभियान</li></a>
+            <li><a href="https://ejalshakti.gov.in/JJM/JJMReports/profiles/rpt_VillageProfile.aspx?stateid=fm9ZNcb2C1M%3d&districtid=7MTLZfVWsKA%3d&blockid=r5ZY2kKqfp0%3d&panchayatid=oXmUXtuvHeA%3d&villageid=V9xnUB5na6Y%3d">जल जीवन मिशन ग्रामपंचायत प्रोफाइल लिंक</a></li>   
+        </ul></div></section>
+<div class="members-section">
+    <h3>ग्रामपंचायत प्रमुख</h3>
+    <div class="members-grid">
+        <div class="member-card">
+            <img src="sarpanch.jpeg" alt="सरपंच">
+            <h4>श्री. अनिकेत लक्ष्मण पाटील</h4>
+            <span>सरपंच</span>
+            <p>ग्रामविकास, स्वच्छता व लोककल्याण योजना प्रभावीपणे राबविण्यासाठी कार्यरत.</p>
+        </div>
+        <div class="member-card">
+            <img src="hanmant_khalsode.jpeg" alt="उपसरपंच">
+            <h4>श्री हनुमंत सोपान खळसोडे</h4>
+            <span>उपसरपंच</span>
+            <p>महिला सक्षमीकरण व सामाजिक उपक्रमांसाठी सक्रिय सहभाग.</p>
+        </div>
+        <div class="member-card">
+            <img src="umate_mam2.jpeg" alt="ग्रामसेवक">
+            <h4>सौ उज्वला तानाजी उमाटे</h4>
+            <span>ग्रामपंचायत अधिकारी</span>
+            <p>प्रशासकीय कामकाज व नागरिक सेवा समन्वयाची जबाबदारी.</p>
+        </div></div></div><br>
+        <img src="map.png" style="width: 1800px;height: 400px;"><br>
+        <div class="news-container">
+    <div class="news-content">
+      <span>🔔 Todays Weather: </span>
+     
+    </div>
+  </div>
+<footer class="footer">
+  <div class="footer-container">
+<!-- About Section -->
+    <div class="footer-box">
+      
+      <div class="footer-logo">
+        <div class="logo-circle">p</div>
+         
+        <h3>ग्रामपंचायत <br><span>पिरटाकळी</span></h3>
+      </div>
+      <p class="footer-text">
+        “Serving the people of Pirtakali through inclusive growth, responsible governance, and sustainable village development.”
+      </p>
+      <ul class="footer-contact">
+        <li>📍 Peertakli, Tal. Mohol, Dist. Solapur,state Maharashtra,India</li>
+        <li>📞 +91 9766084851</li>
+        <li>✉️ grampanchayatpirtakli@gmail.com</li>
+      </ul>
+    </div>
+    <!-- Quick Links -->
+    <div class="footer-box">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="seva.html">Online Certificates</a></li>
+        <li><a href="water_tax.html">Water Supply tax</a></li>
+        <li><a href="propertytax.html">Property Tax</a></li>
+        <li><a href="#">Construction</a></li>
+        <li><a href="#">Officials</a></li>
+      </ul>
+    </div>
+    <!-- Social + Office Hours -->
+    <div class="footer-box">
+      <h4>Connect With Us</h4>
+      <div class="social-icons">
+        <a href="#">🌐</a>
+        <a href="https://www.instagram.com/grampanchayat_peertakali413002?igsh=bmxqYTBlcTNxbDRh"><img src="insta.jpeg" style="width: 20px;height: 20px;" ></a>
+        <a href="https://www.facebook.com/share/1BdqEvWT2w/"><img src="facebook.jpeg" style="width: 20px;height: 20px;" ></a>
+        <a href="#"><img src="youtube_logo.png" style="width: 20px;height: 20px;" ></a>
+      </div>
+      <div class="office-hours">
+        <h5>Office Hours</h5>
+        <p>Monday – Friday</p>
+        <p>9:00 AM – 5:00 PM</p>
+      </div>
+    </div></div>
+<!-- Bottom Bar -->
+  <div class="footer-bottom">
+   
+    <p>© 2025 ग्रामपंचायत पिरटाकळी t| All Rights Reserved | <a href ="gov_dhorane.html">वेबसाइट धोरणे</a></p> |  <a href="web_management.html">वेब माहिती व्यवस्थापक</a>
+  </div></footer></body></html>
