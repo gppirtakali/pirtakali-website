@@ -743,6 +743,86 @@ img:hover {
         flex-direction: column;
     }
 }
+/* Section wrapper */
+section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Section heading */
+section h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #0b5ed7;
+    margin-bottom: 25px;
+    padding-left: 12px;
+    border-left: 6px solid #0b5ed7;
+}
+
+/* FAQ container */
+.faq {
+    background: transparent;
+}
+
+/* Ordered list as grid */
+.faq ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Each card */
+.faq ol li {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px 22px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: all 0.3s ease;
+    border-left: 6px solid #5aa9e6;
+}
+
+/* Hover effect (smooth, official) */
+.faq ol li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Text inside */
+.faq ol li b {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+/* Alternate accent colors like reference tabs */
+.faq ol li:nth-child(3n+1) {
+    border-left-color: #4f46e5; /* blue */
+}
+.faq ol li:nth-child(3n+2) {
+    border-left-color: #ec4899; /* pink */
+}
+.faq ol li:nth-child(3n+3) {
+    border-left-color: #22c55e; /* green */
+}
+
+/* Responsive tuning */
+@media (max-width: 600px) {
+    section h2 {
+        font-size: 22px;
+    }
+
+    .faq ol li {
+        font-size: 15px;
+        padding: 18px;
+    }
+}
 
     </style>
 </head>
