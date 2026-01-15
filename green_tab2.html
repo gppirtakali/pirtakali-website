@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Green Dashboard</title>
+
+<style>
+body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #ffffff;
+    }
+
+    /* Top Header */
+    .header {
+        background-color: #4e9a2f;
+        color: white;
+        text-align: center;
+        padding: 18px 0;
+        font-size: 26px;
+        font-weight: 500;
+    }
+
+    /* Tabs Container */
+    .tabs {
+        display: flex;
+        background-color: #6fbf5b;
+    }
+
+    /* Individual Tab */
+    .tab {
+        flex: 1;
+        text-align: center;
+        padding: 14px 0;
+        font-size: 20px;
+        color: white;
+        border-right: 2px solid #4e9a2f;
+        cursor: pointer;
+    }
+
+    /* Remove last border */
+    .tab:last-child {
+        border-right: none;
+    }
+    .box a,
+.box a:visited,
+.box a:hover,
+.box a:active {
+  color: white;
+}
+.content-area {
+  padding: 40px 60px;
+  background: #ffffff;
+}
+
+.content-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.content-row.reverse {
+  flex-direction: row-reverse;
+}
+/* Logo Card */
+.logo-card {
+  width: 140px;
+  height: 140px;
+  background: #9be88c;
+  border-radius: 6px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.logo-card img {
+  width: 70px;
+  margin-bottom: 8px;
+}
+
+.logo-card p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0b3d0b;
+}
+/* Text */
+.text-box {
+  flex: 1;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #0b3d0b;
+  font-family: "Noto Sans Devanagari", sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content-row,
+  .content-row.reverse {
+    flex-direction: column;
+  }
+
+  .content-area {
+    padding: 25px;
+  }
+
+  .logo-card {
+    margin-bottom: 15px;
+  }
+}
+.fade-slider {
+  position: relative;
+  width: 100%;
+  height: 450px;
+}
+
+.fade-slider img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fade 15s infinite;
+}
+
+.fade-slider img:nth-child(1) { animation-delay: 0s; }
+.fade-slider img:nth-child(2) { animation-delay: 3s; }
+.fade-slider img:nth-child(3) { animation-delay: 6s; }
+.fade-slider img:nth-child(4) { animation-delay: 9s; }
+.fade-slider img:nth-child(5) { animation-delay: 12s; }
+
+@keyframes fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* ---------- FADE SLIDER – CINEMATIC GOVERNANCE ---------- */
+.fade-slider {
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.fade-slider::after {
+  content: "Government Initiatives & Village Life";
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  opacity: 0.85;
+}
+
+</style>
+
+</head>
+<body>
+    <div class="header">
+        पर्यावरण आणि शाश्वत विकास Environment & sustainability
+    </div>
+
+   <div class="tabs">
+        <div class="tab"><a href="green_tab1.html">वृक्षारोपण व वृक्ष संवर्धन</a></div>
+        <div class="tab"><a href="green_tab2.html"></a>प्लास्टिक मुक्त अभियान</div>
+        <div class="tab">कचरा संकलन,वर्गीकरण व उपायोजनाSLWM/LWM </div>
+        <div class="tab"><a href="green_tab_4.html">छतावरील पाऊस पाणी संकलन व पाण्याचा पुनर्वापर ROOF RAIN WATER HARWEASTING</a></div>
+        <div class="tab"><a href="documents.html">कृषी आणि उपजीविका</a></div>
+        <div class="tab"><a href="green_tab_6.html">सौर ऊर्जा व बायोगॅस SOLAR ENARGI &BAIO GAS</a></div>
+    </div>
+   <section class="content-area">
+<!-- Row 1 (Logo Left, Text Right) -->
+  <div class="content-row">
+    <img src="plastic_ban_4.jpg" style="width: 300px;height: 200px;">
+   
+
+    <div class="text-box">
+      प्लास्टिक मुक्ती करता अभियान कालावधीत ग्रामपंचायतीने प्लास्टिक बंदीचा ठराव केला असून सिंगल युज प्लास्टिक संपूर्णतः वापर बंद करण्यात आलेला आहे. गावामध्ये सांडपाणी व घनकचरा व्यवस्थापन अंतर्गत प्लास्टिक कचरा संकलन केंद्र तयार केले असून त्याद्वारे प्लास्टिक बॉटल,कॅरीबॅग, सर्व प्रकारचे प्लास्टिक कचरा संकलित करून तो कचरा (plastic Reause) पुनर्वापर करणेसाठी दिला जातो. 
+प्लास्टिक कचरा कमी होण्याकरता ग्रामपंचायत स्तरावर ग्रामपंचायतीने गावातील प्रत्येक कुटुंबांना ज्यूट च्या कापडी पिशव्या वाटप केलेले आहेत. तसेच प्लास्टिक बंदी बाबत सर्व किरकोळ विक्रेते व दुकानदार यांना प्लास्टिक बंदी करणे बाबत सूचना पत्र देण्यात आले आहेत. 
+सदर ग्रामस्थ कडून या सूचनाचे नियमित पालन करून प्लास्टिक पूर्णतः बंद करण्यात आले आहे.
+    </div>
+  </div>
+  <hr>
+  <div class="fade-slider">
+  <img src="plasticbandiimf.jpeg">
+  <img src="plastic_ban_2.jpeg">
+  <img src="plasstic_ban_3.jpeg">
+  <img src="plastic_ban_4.jpg">
+  
+  
+</div>
+</body>

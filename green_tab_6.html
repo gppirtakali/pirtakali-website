@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Green Dashboard</title>
+
+<style>
+body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #ffffff;
+    }
+
+    /* Top Header */
+    .header {
+        background-color: #4e9a2f;
+        color: white;
+        text-align: center;
+        padding: 18px 0;
+        font-size: 26px;
+        font-weight: 500;
+    }
+
+    /* Tabs Container */
+    .tabs {
+        display: flex;
+        background-color: #6fbf5b;
+    }
+
+    /* Individual Tab */
+    .tab {
+        flex: 1;
+        text-align: center;
+        padding: 14px 0;
+        font-size: 20px;
+        color: white;
+        border-right: 2px solid #4e9a2f;
+        cursor: pointer;
+    }
+
+    /* Remove last border */
+    .tab:last-child {
+        border-right: none;
+    }
+    .box a,
+.box a:visited,
+.box a:hover,
+.box a:active {
+  color: white;
+}
+.content-area {
+  padding: 40px 60px;
+  background: #ffffff;
+}
+
+.content-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.content-row.reverse {
+  flex-direction: row-reverse;
+}
+/* Logo Card */
+.logo-card {
+  width: 140px;
+  height: 140px;
+  background: #9be88c;
+  border-radius: 6px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.logo-card img {
+  width: 70px;
+  margin-bottom: 8px;
+}
+
+.logo-card p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0b3d0b;
+}
+/* Text */
+.text-box {
+  flex: 1;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #0b3d0b;
+  font-family: "Noto Sans Devanagari", sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content-row,
+  .content-row.reverse {
+    flex-direction: column;
+  }
+
+  .content-area {
+    padding: 25px;
+  }
+
+  .logo-card {
+    margin-bottom: 15px;
+  }
+}
+.fade-slider {
+  position: relative;
+  width: 100%;
+  height: 450px;
+}
+
+.fade-slider img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fade 17s infinite;
+}
+
+.fade-slider img:nth-child(1) { animation-delay: 0s; }
+.fade-slider img:nth-child(2) { animation-delay: 3s; }
+.fade-slider img:nth-child(3) { animation-delay: 6s; }
+.fade-slider img:nth-child(4) { animation-delay: 9s; }
+.fade-slider img:nth-child(5) { animation-delay: 12s; }
+.fade-slider img:nth-child(6) { animation-delay: 15s; }
+
+
+@keyframes fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  70%{ opacity: 0;}
+  100% { opacity: 0; }
+}
+
+/* ---------- FADE SLIDER – CINEMATIC GOVERNANCE ---------- */
+.fade-slider {
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.fade-slider::after {
+  content: "Government Initiatives & Village Life";
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  opacity: 0.85;
+}
+
+</style>
+
+</head>
+<body>
+    <div class="header">
+        पर्यावरण आणि शाश्वत विकास Environment & sustainability
+    </div>
+
+   <div class="tabs">
+        <div class="tab"><a href="green_tab1.html">वृक्षारोपण व वृक्ष संवर्धन</a></div>
+        <div class="tab"><a href="green_tab2.html">प्लास्टिक मुक्त अभियान</a></div>
+        <div class="tab">कचरा संकलन,वर्गीकरण व उपायोजनाSLWM/LWM </div>
+        <div class="tab"><a href="green_tab_4.html">छतावरील पाऊस पाणी संकलन व पाण्याचा पुनर्वापर ROOF RAIN WATER HARWEASTING</a></div>
+        <div class="tab"><a href="documents.html">कृषी आणि उपजीविका</a></div>
+        <div class="tab"><a href="green_tab_6.html">सौर ऊर्जा व बायोगॅस SOLAR ENARGI &BAIO GAS</a></div>
+    </div>
+   <section class="content-area">
+<!-- Row 1 (Logo Left, Text Right) -->
+  <div class="content-row">
+    <img src="rainwater_harvesting.png" style="width: 300px;height: 200px;">
+    <img src="rainwater_harvesting_2.png" style="width: 300px;height: 200px;">
+   
+
+    <div class="text-box">
+      गावात सौर ऊर्जा (Solar Energy) प्रकल्प यशस्वीरीत्या राबविण्यात आला असून हा प्रकल्प संपूर्ण गावाच्या ऊर्जेच्या गरजा पूर्ण करण्यास सक्षम ठरला आहे. या प्रकल्पांतर्गत गावातील सर्व स्ट्रीट लाईट्स, पाणीपुरवठा व्यवस्था, शासकीय इमारती, तसेच शाळा या सर्व ठिकाणी सोलरवर चालणारी वीज व्यवस्था बसविण्यात आली आहे.या उपक्रमामुळे गावाची विजेची गरज पूर्णपणे भाग झाली आहे, म्हणजेच कोणतेही मासिक वीज बिल लागत नाही. त्यामुळे ग्रामपंचायतीचा आर्थिक भार कमी झाला असून, बचत झालेली रक्कम इतर विकासकामांसाठी वापरली जाते.सोलर प्रकल्पाची वैशिष्ट्ये:
+गावातील  रस्त्यांवरील दिवे (स्ट्रीट लाईट्स) सोलरवर चालतात.
+शासकीय इमारती, शाळा, अंगणवाड्या आणि आरोग्य उपकेंद्रे या सर्व ठिकाणी सोलरऊर्जेचा वापर केला जातो.
+या प्रकल्पामुळे कार्बन उत्सर्जनात घट झाली असून, पर्यावरणपूरक विकासाचे उदाहरण गावाने चालू करून दिले आहे.
+प्रकल्पाची अंमलबजावणी ग्रामपंचायत आणि स्थानिक प्रशासनाच्या सहकार्याने करण्यात आली आहे.
+सोलर प्रकल्पामुळे गाव ऊर्जेच्या स्वावलंबनाकडे (Energy Self-Sufficiency) वाटचाल करत आहे आणि हा उपक्रम शाश्वत विकासाचे आदर्श मॉडेल ठरत आहे
+    </div>
+  </div>
+  <hr>
+
+  <h2>सोलर प्रकल्पाविषयी सविस्तर माहिती:</h2>
+<ol>
+<li>.सौर ऊर्जा वापर, 
+फिर टाकळी ग्रामपंचायत इमारतीमध्ये सौर ऊर्जा युनिट ग्रामपंचायत इमारतीवर बसवलेल्या असून त्याद्वारे 1kw युनिट बसवून शंभर टक्के वीजपुरवठा सौर ऊर्जेच्या माध्यमातून केला जातो याद्वारे ग्रामपंचायत कार्यालयामध्ये कॉम्प्युटर इन्वर्टर तसेच कार्यालयातील कामासाठी तयार केलेला लाईटचा वापर होतो यामुळे ग्रामपंचायतच्या लाईट बिलामध्ये बचत होऊन वीज निर्मितीमुळे ग्रामपंचायतला फायदा झाला. </li><br>
+<Li>त्याचबरोबर ग्रामपंचायत कार्यालयावर सौर ऊर्जा आधारित सीसीटीव्ही बसवले असून सौर ऊर्जेद्वारे सीसीटीव्हीचे व्यवस्थापन चालते त्यामुळे सीसीटीव्ही करिता लाईटची आवश्यकता भासत नाही सीसीटीव्ही करिता असणारे सौर ऊर्जेचे पॅनल स्वतंत्ररीत्या बसवण्यात आले असून ते कार्यरत आहेत..</Li><br>
+<li>जिल्हा परिषद प्राथमिक शाळेवर सौर ऊर्जा प्रकल्प राबवण्यात आलेला असून शाळेंअंतर्गत संपूर्ण लाईटचा वापर करून तिच्या माध्यमातून केला जातो सदरची सौर युनिट 3kw चे असून संपूर्ण शाळेचे इलेक्ट्रिक व्यवस्थापन, लाईट , फॅन, संगणक इत्यादी व्यवस्थापन याद्वारे केले जाते .यामुळे शाळेतील लाईट बिलात बचत झाली असून त्याचा फायदा शाळेला होत आहे.
+</li><br>
+
+</ol>
+<hr>
+<br>
+
+  <div class="fade-slider">
+  <img src="CCTV2.jpeg">
+  <img src="solar_on_grampanchyat.jpeg">
+  <img src="SOLARPUMP2.jpeg">
+  <img src="biogas_ankush.jpeg">
+  <img src="biogas_dnyaneshwar.jpeg">
+  <img src="biogas_javale.jpeg">
+  
+</div>
+<h2>बायोगॅस </h2>
+<p>गावामध्ये बायोगॅस वापरण्याकरता ग्रामपंचायत द्वारा शेतकऱ्यांना मार्गदर्शन करून त्या माध्यमातून पशुपालक शेतकऱ्यांनी बायोगॅसची निर्मिती केली असून त्याद्वारे हरित ऊर्जा निर्मितीचा प्रयत्न केला आहे या अंतर्गत 3 शेतकऱ्यांनी बायोगॅसची निर्मिती केली असून त्याद्वारे 3 घनमीटर बायोगॅस ची प्रति युनिट माध्यमातून निर्मिती केली असून त्याचा वापर किचन व घरगुती वापरा करिता नियमित वापर केला जात आहे.</p>
+</body>
+

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Green Dashboard</title>
+
+<style>
+body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #ffffff;
+    }
+
+    /* Top Header */
+    .header {
+        background-color: #4e9a2f;
+        color: white;
+        text-align: center;
+        padding: 18px 0;
+        font-size: 26px;
+        font-weight: 500;
+    }
+
+    /* Tabs Container */
+    .tabs {
+        display: flex;
+        background-color: #6fbf5b;
+    }
+
+    /* Individual Tab */
+    .tab {
+        flex: 1;
+        text-align: center;
+        padding: 14px 0;
+        font-size: 20px;
+        color: white;
+        border-right: 2px solid #4e9a2f;
+        cursor: pointer;
+    }
+
+    /* Remove last border */
+    .tab:last-child {
+        border-right: none;
+    }
+    .box a,
+.box a:visited,
+.box a:hover,
+.box a:active {
+  color: white;
+}
+.content-area {
+  padding: 40px 60px;
+  background: #ffffff;
+}
+
+.content-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.content-row.reverse {
+  flex-direction: row-reverse;
+}
+/* Logo Card */
+.logo-card {
+  width: 140px;
+  height: 140px;
+  background: #9be88c;
+  border-radius: 6px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.logo-card img {
+  width: 70px;
+  margin-bottom: 8px;
+}
+
+.logo-card p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0b3d0b;
+}
+/* Text */
+.text-box {
+  flex: 1;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #0b3d0b;
+  font-family: "Noto Sans Devanagari", sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content-row,
+  .content-row.reverse {
+    flex-direction: column;
+  }
+
+  .content-area {
+    padding: 25px;
+  }
+
+  .logo-card {
+    margin-bottom: 15px;
+  }
+}
+.fade-slider {
+  position: relative;
+  width: 100%;
+  height: 450px;
+}
+
+.fade-slider img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fade 10s infinite;
+}
+
+.fade-slider img:nth-child(1) { animation-delay: 0s; }
+.fade-slider img:nth-child(2) { animation-delay: 3s; }
+.fade-slider img:nth-child(3) { animation-delay: 6s; }
+
+
+@keyframes fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* ---------- FADE SLIDER – CINEMATIC GOVERNANCE ---------- */
+.fade-slider {
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.fade-slider::after {
+  content: "Government Initiatives & Village Life";
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  opacity: 0.85;
+}
+
+</style>
+
+</head>
+<body>
+    <div class="header">
+        पर्यावरण आणि शाश्वत विकास Environment & sustainability
+    </div>
+
+   <div class="tabs">
+        <div class="tab"><a href="green_tab1.html">वृक्षारोपण व वृक्ष संवर्धन</a></div>
+        <div class="tab"><a href="green_tab2.html">प्लास्टिक मुक्त अभियान</a></div>
+        <div class="tab">कचरा संकलन,वर्गीकरण व उपायोजनाSLWM/LWM </a></div>
+        <div class="tab"><a href="green_tab_4.html">छतावरील पाऊस पाणी संकलन व पाण्याचा पुनर्वापर ROOF RAIN WATER HARWEASTING</a></div>
+        <div class="tab"><a href="documents.html">कृषी आणि उपजीविका</a></div>
+        <div class="tab"><a href="green_tab_6.html">सौर ऊर्जा व बायोगॅस SOLAR ENARGI &BAIO GAS</a></div>
+    </div>
+   <section class="content-area">
+<!-- Row 1 (Logo Left, Text Right) -->
+  <div class="content-row">
+    <img src="rainwater_harvesting.png" style="width: 300px;height: 200px;">
+    <img src="rainwater_harvesting_2.png" style="width: 300px;height: 200px;">
+   
+
+    <div class="text-box">
+      पावसाच्या पाण्याची साठवण (Rainwater harvesting) म्हणजे पुनर्वापरासाठी पावसाचे पाणी जमा करणे.पावसाचे पाणी घराच्या,इमारत छतावरून एका मोठ्या जमिनीखालच्या टाकीमध्ये गोळा करतात व वर्षभर पिण्यासाठी वापरतात. काही ठिकाणी साठवावयाचे पाणी खोल खड्डा (विहीर, शाफ्ट किंवा बोअरहोल), पाझर असलेल्या जलाशयांत साठवतात. पाणी जाळी किंवा इतर साधनांसह दंव किंवा धुक्यातूनही गोळा केले जाते. हे माणसासाठी अपेय असलेले पाणी गार्डन, पशुधन, सिंचन वा घरगुती वापरासाठी योग्य असते. कापणीचे पाणी, पिण्याचे पाणी हे दीर्घ मुदतीची साठवण करून वापरले जाऊ शकते.
+
+
+    </div>
+  </div>
+  <hr>
+
+  <h2>फायदे:</h2>
+<ol>
+    <li>जलपुनर्भरण
+योग्य प्रकारे जलसंधारण आणि नियोजन केल्यास, पाणीपुरवठ्यासाठी बाहेरील स्रोतांवर कमी प्रमाणात अवलंबून राहावे लागते.</li>
+<Li>जलसंधारणामुळे जमिनीखालील पाण्याची पातळी वाढते.</Li>
+<li>जमिनीखालील पाण्याची पातळी वाढल्यामुळे, पाणी वर खेचण्यासाठी लागणाऱ्या विजेच्या वापरात बचत होते</li>
+<li>जमिनीखालील पाण्याच्या प्रदूषणाचे सौम्यीकरण झाल्यामुळे, पाण्याचा दर्जादेखील सुधारतो.</li>
+<li>जमिनीची धूप रोखण्यास काही प्रमाणात मदत होते.</li>
+<li>गच्चीवरील पाण्याच्या संधारणाच्या पद्धती तुलनेने अवलंबण्यास सोप्या आहेत.</li>
+<li>जलसंधारणाच्या बऱ्याच पद्धती या घरबांधण्यासाठी, वापरण्यासाठी आणि निगा राखण्यासाठी अतिशय सोप्या आहेत.</li>
+<li>समुद्री प्रदेशाजवळील भागांमध्ये, जमिनीखालील खाऱ्या व क्षारयुक्त पाण्याची तीव्रता कमी करण्यासाठी जलसंधारण महत्त्वाचे काम करते.</li>
+<li>निसर्गात स्वच्छ आणि गोड्या पाण्याची कमतरता असल्यामुळे अधिक गोड्या पाण्याचा पुरवठा करणाऱ्या पावसाच्या पाण्याचे नियोजन आवश्यक आहे.</li>
+<li>कमी खर्च.</li>
+<li>पाण्याचे बिल कमी करण्यास मदत करते.</li>
+<li>पाण्याची मागणी कमी करते.</li>
+<li>आयात केलेल्या पाण्याची गरज कमी करते.</li>
+<li>पाणी आणि ऊर्जा संवर्धनाला प्रोत्साहन देते.</li>
+<li>भूजलाची गुणवत्ता आणि प्रमाण सुधारते.</li>
+<li>लँडस्केप सिंचनासाठी गाळण्याची प्रणालीची आवश्यकता नाही.</li>
+<li>हे तंत्रज्ञान तुलनेने सोपे आहे, स्थापित करणे आणि चालवणे सोपे आहे.</li>
+<li>हे मातीची धूप, वादळी पाण्याचा प्रवाह, पूर आणि खते, कीटकनाशके, धातू आणि इतर गाळामुळे पृष्ठभागावरील पाण्याचे प्रदूषण कमी करते.</li>
+<li>हे रसायने, विरघळलेले क्षार आणि सर्व खनिजांपासून मुक्त असलेल्या लँडस्केप सिंचनासाठी पाण्याचा एक उत्कृष्ट स्रोत आहे.</li>
+</ol>
+<hr>
+<br>
+
+  <div class="fade-slider">
+  <img src="rainwater2.jpeg">
+  <img src="rainwater.jpeg">
+  <img src="rainwater3.jpeg">
+  
+  
+  
+</div>
+</body>
