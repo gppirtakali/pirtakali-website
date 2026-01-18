@@ -1018,14 +1018,37 @@ body {
     <p>© 2025 ग्रामपंचायत पिरटाकळी t| All Rights Reserved | <a href ="gov_dhorane.html">वेबसाइट धोरणे</a></p> |  <a href="web_management.html">वेब माहिती व्यवस्थापक</a>
   </div></footer>
   <script>
-    fetch('https://api.countapi.xyz/hit/solapur-demo-visitor/visits')
-      .then(res => res.json())
-      .then(data => {
-          document.getElementById("total").innerText = data.value;
-          document.getElementById("today").innerText = Math.floor(Math.random() * 200) + 50;
-          document.getElementById("yesterday").innerText = Math.floor(Math.random() * 200) + 50;
-          document.getElementById("online").innerText = Math.floor(Math.random() * 40) + 1;
-      });
-    </script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    let today = new Date().toDateString();
+    let lastDate = localStorage.getItem("lastDate");
+
+    let total = Number(localStorage.getItem("totalVisits")) || 0;
+    let todayCount = Number(localStorage.getItem("todayVisits")) || 0;
+    let yesterdayCount = Number(localStorage.getItem("yesterdayVisits")) || 0;
+
+    if (lastDate !== today) {
+        yesterdayCount = todayCount;
+        todayCount = 0;
+        localStorage.setItem("yesterdayVisits", yesterdayCount);
+        localStorage.setItem("todayVisits", 0);
+        localStorage.setItem("lastDate", today);
+    }
+
+    total++;
+    todayCount++;
+
+    localStorage.setItem("totalVisits", total);
+    localStorage.setItem("todayVisits", todayCount);
+
+    document.getElementById("total").innerText = total;
+    document.getElementById("today").innerText = todayCount;
+    document.getElementById("yesterday").innerText = yesterdayCount;
+    document.getElementById("online").innerText = Math.floor(Math.random() * 10) + 1;
+
+});
+</script>
+
+
 
 </body></html>
