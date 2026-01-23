@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Green Dashboard</title>
+<style>
+body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #ffffff;
+    }
+    /* Top Header */
+    .header {
+        background-color: #f79423;
+        color: white;
+        text-align: center;
+        padding: 18px 0;
+        font-size: 26px;
+        font-weight: 500;
+    }
+    /* Tabs Container */
+    .tabs {
+        display: flex;
+        background-color: #eb7e2b;
+    }
+    /* Individual Tab */
+    .tab {
+        flex: 1;
+        text-align: center;
+        padding: 14px 0;
+        font-size: 20px;
+        color: white;
+        background-color: #eb7e2b;
+        border-right: 2px solid ;
+        cursor: pointer;
+    }
+    /* Remove last border */
+    .tab:last-child {
+        border-right: none;
+    }
+    .box a,
+.box a:visited,
+.box a:hover,
+.box a:active {
+  color: white;
+}
+.content-area {
+  padding: 40px 60px;
+  background: #ffffff;
+}
+.content-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.content-row.reverse {
+  flex-direction: row-reverse;
+}
+/* Logo Card */
+.logo-card {
+  width: 140px;
+  height: 140px;
+  background: #9be88c;
+  border-radius: 6px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+.logo-card img {
+  width: 70px;
+  margin-bottom: 8px;
+}
+.logo-card p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ee931d;
+}
+/* Text */
+.text-box {
+  flex: 1;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #0b3d0b;
+  font-family: "Noto Sans Devanagari", sans-serif;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .content-row,
+  .content-row.reverse {
+    flex-direction: column;
+  }
+  .content-area {
+    padding: 25px;
+  }
+  .logo-card {
+    margin-bottom: 15px;
+  }
+}
+.fade-slider {
+  position: relative;
+  width: 100%;
+  height: 450px;
+}
+.fade-slider img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fade 17s infinite;
+}
+.fade-slider img:nth-child(1) { animation-delay: 0s; }
+.fade-slider img:nth-child(2) { animation-delay: 3s; }
+.fade-slider img:nth-child(3) { animation-delay: 6s; }
+.fade-slider img:nth-child(4) { animation-delay: 9s; }
+.fade-slider img:nth-child(5) { animation-delay: 12s; }
+.fade-slider img:nth-child(6) { animation-delay: 15s; }
+
+@keyframes fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  70%{ opacity: 0;}
+  100% { opacity: 0; }
+}
+/* ---------- FADE SLIDER – CINEMATIC GOVERNANCE ---------- */
+.fade-slider {
+  border-radius: 28px;
+  overflow: hidden;
+}
+.fade-slider::after {
+  content: "Government Initiatives & Village Life";
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  opacity: 0.85;
+}
+/* HEADER */
+.header {
+    background-color: #5aa12f;   /* main green */
+    color: #ffffff;
+    text-align: center;
+    padding: 18px 10px;
+    font-family: "Noto Sans Devanagari", Arial, sans-serif;
+}
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+/* NAVIGATION BAR */
+.navbar {
+    display: flex;
+    background-color: #77bb55;
+    border-top: 1px solid #4f8f2f;
+    border-bottom: 1px solid #4f8f2f;
+    font-family: "Noto Sans Devanagari", Arial, sans-serif;
+}
+/* EACH TAB */
+.navbar a {
+    flex: 1;
+    text-align: center;
+    padding: 18px 10px;
+    text-decoration: underline;
+    color: #2a1c7c;          /* blue/purple text like screenshot */
+    font-size: 17px;
+    font-weight: 500;
+    border-right: 1px solid #4f8f2f;
+    background-color: #7fc35e;
+}
+/* REMOVE LAST BORDER */
+.navbar a:last-child {
+    border-right: none;
+}
+/* HOVER EFFECT */
+.navbar a:hover {
+    background-color: #6db64b;
+    color: #1a125a;
+}
+/* HEADER */
+.header {
+    background-color: #eb7e2b;
+    color: #ffffff;
+    text-align: center;
+    padding: 18px;
+    font-size: 26px;
+    font-weight: 600;
+    font-family: "Noto Sans Devanagari", Arial, sans-serif;
+}
+/* TABS CONTAINER */
+.tabs {
+    display: flex;
+    background-color: #e88b28;
+    border-top: 1px solid #eb7e2b;
+    border-bottom: 1px solid #f67b1d;
+    font-family: "Noto Sans Devanagari", Arial, sans-serif;
+}
+/* EACH TAB */
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 16px 10px;
+    border-right: 1px solid #ef8f21;
+    background-color: #f8903b;
+    font-size: 16px;
+    line-height: 1.4;
+}
+/* REMOVE LAST BORDER */
+.tab:last-child {
+    border-right: none;
+}
+/* LINKS INSIDE TAB */
+.tab a {
+    text-decoration: underline;
+    color: #2a1c7c;
+    font-weight: 500;
+    display: block;
+}
+/* HOVER EFFECT */
+.tab:hover {
+    background-color: #e0723c;
+}
+.tab a:hover {
+    color: #d47c2a;
+}
+/* LINKS INSIDE TAB */
+.tab a {
+    color: #1b3b1b;          /* dark green / blackish */
+    text-decoration: none;  /* remove underline */
+    font-weight: 500;
+    display: block;
+}
+/* HOVER EFFECT */
+.tab a:hover {
+    color: #e07529;
+    text-decoration: underline; /* optional, looks official */
+}
+/* TEXT INSIDE NAV */
+.tab,
+.tab a {
+    color: #ffffff;          /* WHITE TEXT */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.4;
+    display: block;
+}
+/* HOVER EFFECT */
+.tab:hover {
+    background-color: #e07529;
+    cursor: pointer;
+}
+.tab:hover a {
+    color: #ffffff;
+    text-decoration: underline; /* optional but classy */
+}/* Page-only styling */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f7f9;
+    color: #222;
+}
+/* Section */
+.staff-section {
+    padding: 60px 40px;
+    text-align: center;
+}
+/* Title */
+.section-title {
+    font-size: 28px;
+    color: #0b4fd6;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+.section-title span {
+    display: block;
+    height: 4px;
+    width: 60%;
+    background: linear-gradient(to right, #0b4fd6, #2bb673);
+    margin: 8px auto 0;
+    border-radius: 5px;
+}
+/* Cards layout */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+/* Card */
+.staff-card {
+    background: #ffffff;
+    width: 300px;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    border-top: 5px solid #2bb673;
+}
+.staff-card:hover {
+    transform: translateY(-6px);
+}
+/* Highlight first card */
+.staff-card.highlight {
+    border: 2px solid #0b4fd6;
+}
+/* Square photo frame */
+.photo-box {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 18px;
+    border: 3px solid #e5e5e5;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+}
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Name */
+.staff-card h3 {
+    font-size: 18px;
+    margin: 10px 0 8px;
+    color: #000;
+}
+/* Designation pill */
+.designation {
+    display: inline-block;
+    background: #e9f7f1;
+    color: #0b7d4f;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+/* Contact info */
+.contact,
+.email {
+    font-size: 14px;
+    color: #333;
+    margin: 6px 0;
+}
+
+
+</style>
+</head>
+<body>
+    <div class="header">
+       शिक्षण विभाग
+    </div>
+   <div class="tabs">
+        <div class="tab"><a href="shikshan photo gallery.html">photo gallery</a></div>
+        <div class="tab"><a href="shikshan vdo gallery.html">Video Gallery</a></div>
+        <div class="tab"><a href="shikshan documents.html">School Documents </a> </div>
+        
+    </div>
+   <section class="content-area">
+<!-- Row 1 (Logo Left, Text Right) -->
+  <div class="content-row">
+    <img src="school logo.webp" style="width: 300px;height: 200px;">
+    <div class="text-box">
+      <b>शाळा सुविधा सक्षमीकरण </b><br>
+      
+मग डीपी टाकळी तालुका मोहोळ अंतर्गत जिल्हा परिषद प्राथमिक शाळा असून यामध्ये 1ते 7वी पर्यंत प्राथमिक शिक्षणाची सुविधा आहे. सदर शाळेचा यु डायस क्रमांक - 27300707001 असून शाळेमध्ये मुले    व मुली    संख्या आहे शाळेचे सर्व सुविधायुक्त शैक्षणिक व गुणवत्ता युक्त शिक्षण देणे तसेच सर्व विद्यार्थ्यांचा सर्वांगीण विकास करणे व त्यांच्या कलागुणांना वाव देऊन कौशल्य यामध्ये रंगत करून मुलांचा सर्वांगीण विकास करणे हे आमचे प्राथमिक ध्येय आहे त्याचबरोबर सर्व मुलांना प्राथमिक स्वरूपातील शिक्षणाच्या सुविधा डिजिटल स्वरूपात उपलब्ध करून देणे त्याचा वापर करणे व ते सुलभपणे करण्यासाठी प्रयत्न करणे, मुलाचे शालाबाई प्रमाण कमी करणे, बालमजुरी कमी करून शैक्षणिक वाढ व गुणवत्ता सुधारणे ही आमची ध्येय आहेत.
+मुख्यमंत्री समृद्ध पंचायतराज अभियान अंतर्गत ग्रामपंचायतच्या कार्यक्षेत्रातील शाळांमध्ये डिजिटल सुविधा उपलब्ध करून देणे व सक्षम करण्याच्या दृष्टीने पायाभूत सुविधा उपलब्ध करून देणे
+    </div>
+  </div>
+  <hr>
+  <h2>पायाभूत सुविधा:</h2>
+<ol>
+<li>शाळेमध्ये वर्गखोली डिजिटल केले असून संगणकाचा नियमित केला जातो </li><br>
+<li>पिण्याच्या पाण्याकरता व वापरण्याच्या पाण्याकरता स्वतंत्र व्यवस्था असून शुद्ध पिण्याच्या पाण्याचा पुरवठा केला जातो.</li><br>
+<li>जिल्हा परिषद प्राथमिक शाळेत मुले व मुली यांच्या प्रमाणात मुलासाठी व मुलीसाठी स्वतंत्र स्वच्छतागृह उपलब्ध करून देण्यात आलेले आहेत व त्याचा नियमित वापर होत आहे.</li><br>
+<li>हात धुण्यासाठी सुविधा उपलब्ध करून देण्यात आलेली आहे.</li><br>
+<li>शाळेत रंगरंगोटी करून बोलक्या भिंती करण्यात आलेले आहेत</li><br>
+<Li>अभियान कालावधीत जिल्हा परिषद प्राथमिक शाळेने सांडपाण्यावरती पोषक परसबाग निर्मिती केलेली आहे.</Li><br>
+<li>Mid day meal मध्यान भोजन योजनेअंतर्गत प्राथमिक शाळेत स्वतंत्र किचनची व्यवस्था उपलब्ध करून देण्यात आलेल्या असून त्याद्वारे मुलांना नियमित मध्ये अनुभवानी व्यवस्था करण्यात येते.</li><br>
+<li>जिल्हा परिषद प्राथमिक शाळेमध्ये 3kw सौर ऊर्जा कार्यान्वित केलेला असून त्याद्वारे शाळेचे सर्व वर्गातील सीसीटीव्ही व संगणक तसेच लाईट व्यवस्थापन केले जाते.</li><br>
+<li>जिल्हा परिषद शाळेत संरक्षण भिंत केलेले असून शाळेचा आवार व परिसर नेहमीच स्वच्छता ठेवला जातो.</li><br>
+</ol>
+<hr>
+<br>
+  <div class="fade-slider">
+  <img src="school slider image 1.jpeg">
+  <img src="shool slider 2.png">
+  <img src="school slider 3.png">
+  <img src="school slider 4.png">
+  <img src="school_aadarsha_shala_puraskar.jpeg">
+  <img src="school_round img.jpeg">
+</div>
+<h1></h1>
+<!DOCTYPE html>
+<html lang="mr"> 
+<head>
+    <meta charset="UTF-8">
+    <title>ग्रामसेवक / कर्मचारी</title>
+    <link rel="stylesheet" href="village_info.css">
+</head>
+<body>
+
+<section class="staff-section">
+
+    <h2 class="section-title">
+        जिल्हा परिषद प्राथमिक शाळा शिक्षक व कर्मचारी
+        <span></span>
+    </h2>
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="staff-card highlight">
+            <div class="photo-box">
+                <img src="principal ZP school.jpeg" alt="Staff Photo">
+            </div>
+            <h3> श्री. विशाल शामराव शिरसटराव</h3>
+            <span class="designation">मुख्याध्यापक</span>
+
+            <p class="contact">
+                📞 9822162454
+            </p>
+            <p class="email">
+                ✉️ vs982212454@gmailcom
+            </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="staff-card">
+            <div class="photo-box">
+                <img src="madhuri kalyani bolkote.jpeg" alt="Staff Photo">
+            </div>
+            <h3>श्रीमती. माधुरी कल्याणी बोळकोटे</h3>
+            <span class="designation">सहशिक्षिका</span>
+
+            <p class="contact">
+                📞  9850375027
+            </p>
+            <p class="email">
+                ✉️ madhuribolkote@gmail.com
+            </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="staff-card">
+            <div class="photo-box">
+                <img src="Pandurang Balasaheb Patil .jpeg" alt="Staff Photo">
+            </div>
+            <h3>श्री.पांडुरंग बाळासाहेब पाटील </h3>
+            <span class="designation">सहशिक्षक</span>
+
+            <p class="contact">
+                📞 9822781831
+            </p>
+            <p class="email">
+                ✉️ harshveda.pp@gmail.com
+            </p>
+        </div>
+        <!-- Card 3 -->
+        <div class="staff-card">
+            <div class="photo-box">
+                <img src="Saraswati_Venkat_Kohale.jpeg" alt="Staff Photo">
+            </div>
+            <h3> </h3>
+            <span class="designation">सहशिक्षिका</span>
+
+            <p class="contact">
+                📞 9822781831
+            </p>
+            <p class="email">
+                ✉️ saraswati.shagun@gmail.com
+            </p>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
+
+</body>

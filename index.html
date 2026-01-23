@@ -862,15 +862,26 @@ nav {
 @keyframes blink {
   50% { opacity: 0.4; }
 }
-
-
+.full-width-img {
+    width: 100%;
+    max-width: 1470px;   /* keeps desktop look same */
+    height: auto;        /* maintains aspect ratio */
+    display: block;
+    margin: 0 auto 20px;
+}
+@media (max-width: 768px) {
+    .full-width-img {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+}
     </style>
 </head>
 
 <body>
 
 
-
+  
 <header>
     <div class="top-header">
         <div class=" logo-circle"><img src="peertakli_logo.png" style="width: 80px;height: 80px;"> 
@@ -890,8 +901,8 @@ nav {
       <ul class="dropdown-content">
         <li><a href="vibhag1.html">ग्रामविकास विभाग</a></li>
         <li><a href="vibhag2.html">पाणी पुरवठा विभाग</a></li>
-        <li><a href="vibhag3.html">महिला व बालविकास</a></li>
-        <li><a href="vibhag4.html">शिक्षण विभाग</a></li>
+        <li><a href="mahila v balkalyan tab.html">महिला व बालविकास</a></li>
+        <li><a href="shikshan_vibhag.html">शिक्षण विभाग</a></li>
         <li><a href="vibhag5.html">आरोग्य विभाग</a></li>
         <li><a href="documents.html">कृषी विभाग</a></li>
         <li><a href="vibhag8.html">उपजीविका विभाग</a></li>
@@ -899,7 +910,6 @@ nav {
         <li><a href="vibhag10.html">घरकुल योजना</a></li>
         <li><a href="vibhag11.html">योजना विभाग </a></li>
 
-    
       </ul>
     </li>
     <li><a href="seva.html">नागरिक सेवा</a></li>
@@ -1016,15 +1026,15 @@ nav {
             <p>प्रशासकीय कामकाज व नागरिक सेवा समन्वयाची जबाबदारी.</p>
         </div></div></div><br>
         
-        <img src="heading_for_pai.png" style="width: 1470px;">
-        <img src="pai_score.png" style="width: 1470px;">
+        <img src="heading_for_pai.png" class="full-width-img" style="width: 1470px;">
+        <img src="pai_score.png" class="full-width-img" style="width: 1470px;">
         <div class="news-container">
         <div class="news-content">
       <span><h2>🔔 : <a href="Gram Panchayat _ Peertakali PAI Score Card.pdf">Click here to download pdf report(पंचायत विकास सूचिकांक सन 2022/23रिपोर्ट पाहण्यासाठी येथे क्लिक करा.)</h2></a> </span>
      
     </div></div>
       
-        <img src="map.png" style="width:1470px;height: 400px;"><br>
+        <img src="map.png" class="full-width-img" style="width:1470px;height: 400px;"><br>
         <div class="news-container">
     <div class="news-content">
       <span>🔔 Todays Weather: <a href="https://www.accuweather.com/en/in/peertakali/2782468/weather-forecast/2782468">Click here to see todays weather( आजचे हवामान पाहण्यासाठी येथे क्लिक करा )</a> </span>

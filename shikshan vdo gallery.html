@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Video Gallery</title>
+
+<style>
+/* Reset + base vibe */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa, #e4ecf4);
+  padding: 40px 20px;
+}
+
+/* Page heading */
+.page-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 35px;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+
+/* Video grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Video card */
+.video-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 40px rgba(0,0,0,0.18);
+}
+
+/* Heading */
+.video-card h3 {
+  text-align: center;
+  margin-bottom: 12px;
+  color: #34495e;
+  font-size: 1.1rem;
+}
+
+/* Video */
+.video-card video {
+  width: 100%;
+  border-radius: 12px;
+  outline: none;
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="page-title">🎥 चलचित्र दालन</h1>
+
+<div class="video-grid">
+
+  <div class="video-card">
+    <h3>शाळा</h3>
+    <video controls>
+      <source src="school_vdo1.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="video-card">
+    <h3>वर्गप्रतीनिधी निवडणूक हा उपक्रम</h3>
+    <video controls>
+      <source src="school_matdaan_upkram.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="video-card">
+    <h3>सूर्यनमस्कार</h3>
+    <video controls>
+      <source src="school_suryanamaskar_vdo.mp4" type="video/mp4"> 
+    </video>
+  </div>
+
+  
+
+  <div class="video-card">
+    <h3>Takaupasun टिकाऊ वस्तू</h3>
+    <video controls>
+      <source src="takau pasun tikau.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  
+    
+
+</div>
+
+
+
+</body>
+</html>

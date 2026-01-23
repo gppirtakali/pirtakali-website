@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            notice tab
+        </title>
+        <style>
+                body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #ffffff;
+    }
+    /* Top Header */
+    .header {
+        background-color: #4e9a2f;
+        color: white;
+        text-align: center;
+        padding: 18px 0;
+        font-size: 26px;
+        font-weight: 500;
+    }
+    /* Tabs Container */
+    .tabs {
+        display: flex;
+        background-color: #6fbf5b;
+    }
+    /* Individual Tab */
+    .tab {
+        flex: 1;
+        text-align: center;
+        padding: 14px 0;
+        font-size: 20px;
+        color: white;
+        border-right: 2px solid #4e9a2f;
+        cursor: pointer;
+    }
+    /* Remove last border */
+    .tab:last-child {
+        border-right: none;
+    }
+    .box a,
+.box a:visited,
+.box a:hover,
+.box a:active {
+  color: white;
+}
+.content-area {
+  padding: 40px 60px;
+  background: #ffffff;
+}
+.content-row {
+  display: flex;
+  align-items:;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.content-row.reverse {
+  flex-direction: row-reverse;
+}
+/* Logo Card */
+.logo-card {
+  width: 140px;
+  height: 140px;
+  background: #9be88c;
+  border-radius: 6px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+.logo-card img {
+  width: 70px;
+  margin-bottom: 8px;
+}
+.logo-card p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0b3d0b;
+}
+/* Text */
+.text-box {
+  flex: 1;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #000000;
+  font-family: "Noto Sans Devanagari", sans-serif;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .content-row,
+  .content-row.reverse {
+    flex-direction: column;
+  }
+  .content-area {
+    padding: 25px;
+  }
+  .logo-card {
+    margin-bottom: 15px;
+  }
+}
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;              /* space between logo & text */
+  padding: 15px 25px;
+  background-color: #8ac5ef;
+}
+body {
+    background: linear-gradient(135deg, #f5f9ff, #eef6f3);
+}
+.header-text {
+  text-align: left;       /* text stays neat */
+}
+.fade-slider {
+  position: relative;
+  width: 100%;
+  height: 550px;
+}
+.fade-slider img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fade 17s infinite;
+}
+.fade-slider img:nth-child(1) { animation-delay: 0s; }
+.fade-slider img:nth-child(2) { animation-delay: 3s; }
+.fade-slider img:nth-child(3) { animation-delay: 6s; }
+.fade-slider img:nth-child(4) { animation-delay: 9s; }
+.fade-slider img:nth-child(5) { animation-delay: 12s; }
+.fade-slider img:nth-child(6) { animation-delay: 15s; }
+
+@keyframes fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  70%{ opacity: 0;}
+  100% { opacity: 0; }
+}
+/* ---------- FADE SLIDER – CINEMATIC GOVERNANCE ---------- */
+.fade-slider {
+  border-radius: 28px;
+  overflow: hidden;
+}
+.fade-slider::after {
+  content: "Government Initiatives & Village Life";
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  opacity: 0.85;
+
+</style>
+        
+    </head>
+    <body>
+        
+       <div class="header">
+ 
+  <div class="header-text">
+    <h1>अंगणवाडी सुविधा सक्षमीकरण </h1>
+  </div>
+</div>
+
+        <div class="content-row">
+    
+      <img src="anganvadoi logo.webp" alt="Tree Logo" style="width: 500px;height: 500px;">
+      <div class="text-box">
+      <u><h2>ग्रामपंचायत पिरटाकळी, तालुका मोहोळ, जिल्हा सोलापूर</h2></u>
+      <h2>अंगणवाडी सुविधा सक्षमीकरण</h2>
+      <li><p>गावात 2अंगणवाडी असून 1. गावठाण ग्रामपंचायत शेजारी व 2. बरड वस्ती येथे आहे. दोन्ही अंगणवाडीतील बालकांची 0ते 6 वयोगटातल्या मुलांची संख्या मुली -      
+मुले.-        आहेत. <br>
+सर्व बालकांचे नियमित लसीकरण, आरोग्य तपासणी ANM, MPW PHC KAMTI BK मार्फत नियमित केले जाते..</li>
+<li>
+गावातील सर्व अंगणवाडी चे माध्यमातून मुलांना संगणक इंटरनेट स्मार्ट डिवाइस व डिजिटल शिक्षणाची साधने उपलब्ध करून देऊन मुलांचा बौद्धिक विकास करणे मुलांना बेसिक माहिती चित्रांची ओळख , नियमित पोषण आहार नियमित लसीकरण स्वच्छतेच्या सवयी ,स्वच्छतागृहाचा वापर, याद्वारे मुले आणि मुलांचा सर्वांगीण विकास करणे.</p></li>
+<h2>गावातील अंगणवाडी डिजिटल करणे</h2>
+<ol><li>गावातील अंगणवाडी डिजिटल करण्याकरता ग्रामपंचायत द्वारा स्मार्ट टीव्ही उपलब्ध करून दिला असून त्याद्वारे मुलांना व मोबाईलच्या ॲपद्वारे मुलांना शिकवणे व गाणी, गोष्टी animatation video त्या द्वारे शिक्षण दिले जाते.</li>
+<li>अंगणवाडीत बालस्नेही स्वच्छतागृह असून त्याचा नियमित वापर केला जातो व पिण्याकरता स्वच्छ पिण्याच्या पाण्याची सुविधा उपलब्ध करून देण्यात आलेली आहे</li>
+<li>अंगणवाडीतील भिंती बोलके केल्या असल्यामुळे मुलांना सहजरीत्या प्राणी पक्षी फुले आपला परिसर याची ओळख होण्यास मदत होऊन मुलांना बोलके भिंती द्वारे हसत खेळत शिक्षणाचा उपक्रमद्वारे नियमित शिकवले जाते.</li>
+</ol>
+    </div>
+    <hr>
+</div>
+<hr>
+  <div class="fade-slider">
+  <img src="anganvadi img.jpeg">
+  <img src="anganvadi slider 1.jpeg">
+  <img src="anganvadi slider 2.jpeg">
+  <img src="anganvadi slider 3.jpeg">
+  <img src="anganvadi img.jpeg">
+  
+    </body>
+</html>
