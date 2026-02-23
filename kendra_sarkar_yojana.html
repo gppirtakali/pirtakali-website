@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<title>राज्य सरकार योजना</title>
+<style>
+    body {
+    font-family: "Noto Sans Devanagari", Arial, sans-serif;
+    background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* TABS */
+.tabs {
+    display: flex;
+    background: #eb7e2b;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 14px 0;
+    transition: 0.3s;
+    position: relative;
+}
+
+.tab a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.tab:hover {
+    background: #d96c1d;
+}
+
+/* underline animation */
+.tab::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.4s;
+}
+
+.tab:hover::after {
+    width: 100%;
+}
+
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+
+/* PAGE TITLE */
+.page-title {
+    margin-top: 35px;
+    margin-bottom: 25px;
+    font-size: 34px;
+    font-weight: bold;
+    color: #e65100;
+}
+
+
+/* CARD GRID */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+
+/* CARD DESIGN */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: none;
+    min-height: 170px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+/* glowing top border */
+.card::before {
+    content: "";
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(90deg, #ff9800, #f57c00);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* CARD HOVER */
+.card:hover {
+
+    transform: translateY(-8px) scale(1.02);
+
+    box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+
+}
+
+
+/* CARD TEXT */
+.card h3 {
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+
+    color: #bf360c;
+
+}
+
+
+.card p {
+
+    font-size: 15px;
+
+    color: #555;
+
+}
+
+
+/* BUTTON DESIGN */
+button {
+
+    background: linear-gradient(90deg, #ff9800, #f57c00);
+
+    border: none;
+
+    padding: 10px 22px;
+
+    font-size: 15px;
+
+    border-radius: 25px;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+/* BUTTON HOVER */
+button:hover {
+
+    transform: scale(1.1);
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+}
+
+
+/* BUTTON CLICK EFFECT */
+button:active {
+
+    transform: scale(0.95);
+
+}
+
+
+/* SMOOTH PAGE LOAD ANIMATION */
+.card {
+
+    animation: fadeIn 0.7s ease;
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+</style>
+</head>
+
+<body>
+    
+
+<div class="container">
+
+    <h1 class="page-title">केंद्र सरकार योजना</h1>
+
+    <div class="card-container">
+
+        <!-- Card 4 -->
+        <div class="card">
+            <h3>अटल बांधकाम कामगार आवास योजना</h3>
+            <p><b>प्रकाशित तारीख:</b> 26/01/2026</p><br>
+            <a href="atal_bandhkam_kamgar_yojna.html">
+            <button>तपशील →</button>
+            </a>
+        </div>
+       
+        <!-- Card 4 -->
+        <div class="card">
+            <h3>प्रधानमंत्री आवास योजना – ग्रामीण</h3>
+            <p><b>प्रकाशित तारीख:</b> 26/01/2026</p><br><br>
+            <a href="pradhanmantri_aawas_yojana_gramin.html">
+<button>तपशील →</button>
+</a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <h3>पंडित दीनदयाल उपाध्याय निवारा खरेदी सहाय योजना</h3>
+            <p><b>प्रकाशित तारीख:</b> 26/01/2026</p><br><br>
+            <a href="pandit_dindayal...yojana.html">
+<button>तपशील →</button>
+</a>
+        </div>
+
+        
+
+        
+    </div>
+
+</div>
+
+</body>
+</html>
