@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Photo Gallery</title>
+
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#f4f6f8, #eef2f5);
+  margin: 0;
+}
+
+/* Page wrapper */
+.gallery-page {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Main title */
+.gallery-page h1 {
+  text-align: center;
+  color: #0a3d62;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 45px;
+  font-size: 15px;
+}
+
+/* Section heading */
+.gallery-page h2 {
+  color: #0a3d62;
+  margin: 50px 0 18px;
+  padding-left: 12px;
+  border-left: 5px solid #0a3d62;
+  font-size: 21px;
+  animation: fadeInUp 0.6s ease;
+}
+
+/* Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+/* Card */
+.gallery-item {
+  position: relative;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+}
+
+/* Image */
+.gallery-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Hover overlay */
+.gallery-item::after {
+  content: "View Image";
+  position: absolute;
+  inset: 0;
+  background: rgba(10,61,98,0.55);
+  color: #fff;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* Caption */
+.gallery-item p {
+  padding: 8px;
+  font-size: 13px;
+  color: #444;
+  text-align: center;
+  margin: 0;
+}
+
+/* Fade animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .gallery-page h2 {
+    font-size: 18px;
+  }
+}
+
+.gallery-grid a {
+  text-decoration: none;
+  color: inherit;
+}
+
+</style>
+
+
+
+
+<div class="lightbox" id="lightbox" onclick="this.style.display='none'">
+  <img id="lightbox-img">
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".gallery-item img").forEach(img => {
+    img.addEventListener("click", function () {
+      document.getElementById("lightbox-img").src = this.src;
+      document.getElementById("lightbox").style.display = "flex";
+    });
+  });
+});
+</script>
+</head>
+
+<body>
+
+<section class="gallery-page">
+<h1>छायाचित्र दालन</h1>
+<p class="subtitle">Agriculture Activities & Events</p>
+
+<h2></h2>
+<div class="gallery-grid">
+  <a href="krushi_img1.jpeg"><div class="gallery-item"><img src="krushi_img1.jpeg""><p></p></div></a>
+  <a href="krushi_img2.jpeg"><div class="gallery-item"><img src="krushi_img2.jpeg"><p></p></div></a>
+  <a href="krushi_img3.jpeg"><div class="gallery-item"><img src="krushi_img3.jpeg"><p></p></div></a>
+  <a href="krushi_img4.jpeg"><div class="gallery-item"><img src="krushi_img4.jpeg"><p></p></div></a>
+  <a href="krushi_img5.jpeg"><div class="gallery-item"><img src="krushi_img5.jpeg"><p></p></div></a>
+  <a href="krushi_img6.jpeg"><div class="gallery-item"><img src="krushi_img6.jpeg"><p></p></div></a>
+  <a href="krushi_img7.jpeg"><div class="gallery-item"><img src="krushi_img7.jpeg"><p></p></div></a>
+</div>
+
+
+
+
+</section>
+
+</body>
+</html>
+  

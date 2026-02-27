@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>कृषी विभाग</title>
+<style>
+body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #ffffff;
+    }
+    /* Top Header */
+    .header {
+        background-color: #239835;
+        color: white;
+        text-align: center;
+        padding: 18px 0;
+        font-size: 26px;
+        font-weight: 500;
+    }
+    /* Tabs Container */
+    .tabs {
+        display: flex;
+        background-color: #88d41e;
+    }
+    /* Individual Tab */
+    .tab {
+        flex: 1;
+        text-align: center;
+        padding: 14px 0;
+        font-size: 20px;
+        color: white;
+        background-color: #88d41e;
+        border-right: 2px solid ;
+        cursor: pointer;
+    }
+    /* Remove last border */
+    .tab:last-child {
+        border-right: none;
+    }
+    .box a,
+.box a:visited,
+.box a:hover,
+.box a:active {
+  color: white;
+}
+.content-area {
+  padding: 40px 60px;
+  background: #ffffff;
+}
+.content-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.content-row.reverse {
+  flex-direction: row-reverse;
+}
+/* Logo Card */
+.logo-card {
+  width: 140px;
+  height: 140px;
+  background: #9be88c;
+  border-radius: 6px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+.logo-card img {
+  width: 70px;
+  margin-bottom: 8px;
+}
+.logo-card p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ee931d;
+}
+/* Text */
+.text-box {
+  flex: 1;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #0b3d0b;
+  font-family: "Noto Sans Devanagari", sans-serif;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .content-row,
+  .content-row.reverse {
+    flex-direction: column;
+  }
+  .content-area {
+    padding: 25px;
+  }
+  .logo-card {
+    margin-bottom: 15px;
+  }
+}
+.fade-slider {
+  position: relative;
+  width: 100%;
+  height: 450px;
+}
+.fade-slider img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fade 17s infinite;
+}
+.fade-slider img:nth-child(1) { animation-delay: 0s; }
+.fade-slider img:nth-child(2) { animation-delay: 3s; }
+.fade-slider img:nth-child(3) { animation-delay: 6s; }
+.fade-slider img:nth-child(4) { animation-delay: 9s; }
+
+
+@keyframes fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  40% { opacity: 0; }
+  70%{ opacity: 0;}
+  100% { opacity: 0; }
+}
+/* ---------- FADE SLIDER – CINEMATIC GOVERNANCE ---------- */
+.fade-slider {
+  border-radius: 28px;
+  overflow: hidden;
+}
+.fade-slider::after {
+  content: "Government Initiatives & Village Life";
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  opacity: 0.85;
+}
+/* HEADER */
+.header {
+    background-color: #5aa12f;   /* main green */
+    color: #ffffff;
+    text-align: center;
+    padding: 18px 10px;
+    font-family: "Noto Sans Devanagari", Arial, sans-serif;
+}
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+/* NAVIGATION BAR */
+.navbar {
+    display: flex;
+    background-color: #77bb55;
+    border-top: 1px solid #4f8f2f;
+    border-bottom: 1px solid #4f8f2f;
+    font-family: "Noto Sans Devanagari", Arial, sans-serif;
+}
+/* EACH TAB */
+.navbar a {
+    flex: 1;
+    text-align: center;
+    padding: 18px 10px;
+    text-decoration: underline;
+    color: #2a1c7c;          /* blue/purple text like screenshot */
+    font-size: 17px;
+    font-weight: 500;
+    border-right: 1px solid #4f8f2f;
+    background-color: #7fc35e;
+}
+/* REMOVE LAST BORDER */
+.navbar a:last-child {
+    border-right: none;
+}
+/* HOVER EFFECT */
+.navbar a:hover {
+    background-color: #6db64b;
+    color: #1a125a;
+}
+/* HEADER */
+.header {
+    background-color: #eb7e2b;
+    color: #ffffff;
+    text-align: center;
+    padding: 18px;
+    font-size: 26px;
+    font-weight: 600;
+    font-family: "Noto Sans Devanagari", Arial, sans-serif;
+}
+/* TABS CONTAINER */
+.tabs {
+    display: flex;
+    background-color: #e88b28;
+    border-top: 1px solid #eb7e2b;
+    border-bottom: 1px solid #f67b1d;
+    font-family: "Noto Sans Devanagari", Arial, sans-serif;
+}
+/* EACH TAB */
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 16px 10px;
+    border-right: 1px solid #ef8f21;
+    background-color: #f8903b;
+    font-size: 16px;
+    line-height: 1.4;
+}
+/* REMOVE LAST BORDER */
+.tab:last-child {
+    border-right: none;
+}
+/* LINKS INSIDE TAB */
+.tab a {
+    text-decoration: underline;
+    color: #2a1c7c;
+    font-weight: 500;
+    display: block;
+}
+/* HOVER EFFECT */
+.tab:hover {
+    background-color: #e0723c;
+}
+.tab a:hover {
+    color: #d47c2a;
+}
+/* LINKS INSIDE TAB */
+.tab a {
+    color: #1b3b1b;          /* dark green / blackish */
+    text-decoration: none;  /* remove underline */
+    font-weight: 500;
+    display: block;
+}
+/* HOVER EFFECT */
+.tab a:hover {
+    color: #e07529;
+    text-decoration: underline; /* optional, looks official */
+}
+/* TEXT INSIDE NAV */
+.tab,
+.tab a {
+    color: #ffffff;          /* WHITE TEXT */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.4;
+    display: block;
+}
+/* HOVER EFFECT */
+.tab:hover {
+    background-color: #e07529;
+    cursor: pointer;
+}
+.tab:hover a {
+    color: #ffffff;
+    text-decoration: underline; /* optional but classy */
+}/* Page-only styling */
+
+
+</style>
+</head>
+<body>
+    <div class="header">
+       कृषी विभाग
+    </div>
+   <div class="tabs">
+        <div class="tab"><a href="krushi photo gallery.html">photo gallery</a></div>
+        <div class="tab"><a href="krushi vdo gallery.html">Video Gallery</a></div>
+        <div class="tab"><a href="documents.html"> Documents </a> </div>
+        
+    </div>
+   <section class="content-area">
+<!-- Row 1 (Logo Left, Text Right) -->
+  <div class="content-row">
+    <img src="krushi_img7.jpeg" style="width: 300px;height: 200px;">
+    <div class="text-box">
+      <b>कृषी विभाग</b><br>
+      कृषी विभागाच्या माध्यमातून शेतकऱ्यांची FARMAR ID साठी नोंदणी, DBT द्वारे दिले जाणारे लाभ, MGNREGA अंतर्गत अभिसरण योजनेअंतर्गत शेतकऱ्यांना ग्रामपंचायत पीरटाकळी कृषी समिती मार्फत लाभाच्या योजना v माहिती दिली जाते.<br>
+      गावातील बहुतांशी लोकांचा व्यवसाय शेती असून शेतीमध्ये बहुतांश ऊस पिकाचे उत्पादन मोठ्या प्रमाणावर केले जाते त्याचबरोबर फळबाग लागवड व पारंपारिक शेती पिके घेतली जातात. तसेच शेतीस जोडधंदा म्हणून दुग्ध व्यवसाय तसेच रेशीम उद्योग व्यवसाय केला जातो या गावात रेशीम उद्योग अंतर्गत रेशीम शेती मोठ्या प्रमाणात केली जाते,येथे "रेशीम संचालनालय सोलापूर" यांचे कार्यालय मार्फत choki shed (रेशीम उद्योगातील लहानअळी, आंडीपुंज उत्पादन करणे)प्रकल्प मंजूर झाला असून सध्या प्रकल्पाचे कामकाज चालू आहे.
+    <br>गावचे एकूण क्षेत्र हेक्टर असून त्यापैकी.     क्षेत्र बागायती आहे
+    </div>
+  </div>
+  <hr>
+  
+<br>
+  <div class="fade-slider">
+  <img src="krushi_img4.jpeg">
+  <img src="krushi_img7.jpeg">
+  <img src="krushi_img5.jpeg">
+  <img src="biogas_javale.jpeg">
+</div>
+<h1></h1>
+</div>
+</section>
+
+</body>
+</html>
+
